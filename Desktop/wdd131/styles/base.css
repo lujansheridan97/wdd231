@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Improved color variables for better contrast */
+    --primary-color: rgb(14, 52, 14); /* Darker green for better contrast */
+    --secondary-color: rgb(24, 24, 24); /* Darker gray for better contrast */
+    --accent-color: rgb(58, 141, 66); /* Darker green accent */
+    --border-radius: 1rem;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "Oswald", sans-serif;
+}
+
+p, a, span {
+    font-family: "Afacad Flux", sans-serif;
+}
+
+body {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: var(--primary-color);
+}
+
+header h1 {
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--secondary-color);
+}
+
+header nav a {
+    text-decoration: none;
+    padding: 1rem;
+    color: white;
+    text-decoration: dashed;
+}
+
+header nav a:hover {
+    color: var(--accent-color);
+}
+
+ul {
+    list-style-position: inside; /* Aligns numbers or bullets with text */
+    padding: 1rem;
+}
+
+li {
+    padding: 0.1rem;
+}
+
+.card {
+    margin: 0.5rem;
+    border: 1px solid;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card h2 {
+    padding: 0.5rem;
+    text-align: center;
+    color: white;
+    background-color: var(--primary-color);
+}
+
+.card
+
+
+#flag-photo {
+    width: 40%;
+    max-width: 300px;
+    min-width: 150px;
+    float: left;
+    padding: 1rem;
+}
+
+#profile-photo {
+    width: 30%;
+    max-width: 200px;
+    min-width: 100px;
+    float: right;
+    padding: 1rem;
+}
