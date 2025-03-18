@@ -1,0 +1,58 @@
+[
+    {
+        "name": "ABC Consulting",
+        "address": "123 Main St, Anytown, USA",
+        "phone": "(123) 456-7890",
+        "website": "https://abcconsulting.com",
+        "image": "abc_logo.png",
+        "membership": 3
+    },
+    {
+        "name": "XYZ Marketing",
+        "address": "456 Elm St, Othertown, USA",
+        "phone": "(987) 654-3210",
+        "website": "https://xyzmarketing.com",
+        "image": "xyz_logo.png",
+        "membership": 2
+    },
+    {
+        "name": "Tech Solutions",
+        "address": "789 Oak St, Sometown, USA",
+        "phone": "(555) 123-4567",
+        "website": "https://techsolutions.com",
+        "image": "tech_logo.png",
+        "membership": 1
+    },
+    {
+        "name": "Green Energy Corp",
+        "address": "321 Pine St, Newtown, USA",
+        "phone": "(111) 222-3333",
+        "website": "https://greenenergy.com",
+        "image": "green_logo.png",
+        "membership": 3
+    },
+    {
+        "name": "Best Bakery",
+        "address": "654 Maple St, Anycity, USA",
+        "phone": "(444) 555-6666",
+        "website": "https://bestbakery.com",
+        "image": "bakery_logo.png",
+        "membership": 2
+    },
+    {
+        "name": "Fast Cars Dealership",
+        "address": "987 Birch St, Speedtown, USA",
+        "phone": "(777) 888-9999",
+        "website": "https://fastcars.com",
+        "image": "cars_logo.png",
+        "membership": 1
+    },
+    {
+        "name": "Healthy Living Gym",
+        "address": "852 Cedar St, Fitville, USA",
+        "phone": "(222) 333-4444",
+        "website": "https://healthyliving.com",
+        "image": "gym_logo.png",
+        "membership": 2
+    }
+]
