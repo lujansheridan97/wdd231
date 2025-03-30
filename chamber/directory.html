@@ -3,28 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber Directory</title>
-    <link rel="stylesheet" href="../styles/chamber.css">
+    <meta name="description" content="Explore the Chamber of Commerce Directory. ">
+    <meta name="author" content="Lujan Ruiz Diaz Franco">
+    <meta property="og:title" content="Chamber of Commerce Directory - Lujan Ruiz Diaz Franco">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/favicom.jpg"> <!-- Correct file extension added -->
+    <meta property="og:url" content="https://yourwebsite.com/directory.html"> <!-- Update with actual live URL -->
+    <title>Chamber of Commerce Directory - Lujan Ruiz Diaz Franco</title>
+
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicom.png" type="image/png"> 
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Chamber Directory</h1>
-        <nav>
+        <img src="images/profile-picture.jpg" alt="Profile picture" srcset="images/profile-picture-small.jpg 600w, images/profile-picture-large.jpg 1200w"> <!-- Added srcset for responsiveness -->
+        <span>Lujan Ruiz Diaz</span>
+        <button id="menuButton" aria-label="Open menu">☰ Menu</button>
+        <nav id="navMenu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="chamber.html">Chamber</a></li>
+                <li><a href="https://github.com/lujansheridan97" target="_blank">GitHub Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/lujan-ruiz-diaz-f/" target="_blank">LinkedIn</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-        <h1>Business Directory</h1>
-        <section id="business-list"></section>
+        <h1>Chamber of Commerce Directory</h1>
+
+        <!-- View toggle buttons -->
+        <div id="viewToggle">
+            <button id="gridView">Grid View</button>
+            <button id="listView">List View</button>
+        </div>
+
+        <!-- Directory content: Members List -->
+        <section id="membersDirectory">
+            <div class="member-card">
+                <h2>John Doe</h2>
+                <p>Business Owner</p>
+                <a href="mailto:john@example.com">Contact</a>
+            </div>
+            <div class="member-card">
+                <h2>Jane Smith</h2>
+                <p>Founder</p>
+                <a href="mailto:jane@example.com">Contact</a>
+            </div>
+            <!-- Additional member cards can be added here -->
+        </section>
     </main>
+
     <footer>
-        <p>&copy; 2025 Chamber of Commerce</p>
+        <p>&copy; <span id="currentyear"></span> Lujan Ruiz Diaz | Argentina</p>
+        <p id="lastModified"></p>
+        <p>Contact: lujan@example.com | WDD 231</p>
     </footer>
-    <script src="../scripts/navigation.js"></script>
-    <script src="../scripts/directory.js"></script>
+
+    <script>
+        // Dynamically update current year and last modified date
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
 </body>
 </html>
