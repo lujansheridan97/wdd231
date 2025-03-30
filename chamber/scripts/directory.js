@@ -102,3 +102,104 @@ async function getForecast(city, weatherAPIKey) {
         forecastContainer.appendChild(forecastCard);
     }
 }
+
+// Fetch weather data from OpenWeatherMap API
+async function getWeather() {
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=your-city&appid=YOUR_API_KEY&units=metric`);
+    const data = await response.json();
+    const temperature = data.main.temp;
+    const description = data.weather[0].description;
+
+    // Display current weather
+    document.getElementById('weather-info').innerHTML = `${temperature}°C, ${description}`;
+    getThreeDayForecast();
+}
+
+// Fetch 3-day weather forecast
+async function getThreeDayForecast() {
+    const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=your-city&appid=YOUR_API_KEY&units=metric`);
+    const data = await response.json();
+    const forecast = data.list.filter((item, index) => index % 8 === 0).slice(0, 3); // Get 3-day forecast
+
+    forecast.forEach((day, index) => {
+        const dayElement = document.getElementById(`forecast-day-${index + 1}`);
+        dayElement.innerHTML = `${day.dt_txt}: ${day.main.temp}°C, ${day.weather[0].description}`;
+    });
+}
+
+// Call the weather function
+getWeather();
+
+function displaySpotlights(members) {
+    const spotlightContainer = document.getElementById('spotlight-container');
+    spotlightContainer.innerHTML = ''; // Clear previous spotlights
+
+    const filteredMembers = members.filter(member => member.membership_level === 'Gold' || member.membership_level === 'Silver');
+    const randomSpotlights = getRandomMembers(filteredMembers, 3); // Select 3 random members
+
+    randomSpotlights.forEach(member => {
+        const spotlightCard = document.createElement('div');
+        spotlightCard.classList.add('spotlight-card');
+
+        spotlightCard.innerHTML = `
+            <h3>${member.name}</h3>
+            <img src="${member.image}" alt="${member.name}">
+            <p>Phone: ${member.phone}</p>
+            <p>Address: ${member.address}</p>
+            <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
+            <p>Membership Level: ${member.membership_level}</p>
+        `;
+
+        spotlightContainer.appendChild(spotlightCard);
+    });
+}
+
+// Helper to get random members
+function getRandomMembers(members, count) {
+    const randomMembers = [];
+    while (randomMembers.length < count) {
+        const randomIndex = Math.floor(Math.random() * members.length);
+        const randomMember = members[randomIndex];
+        if (!randomMembers.includes(randomMember)) {
+            randomMembers.push(randomMember);
+        }
+    }
+    return randomMembers;
+}
+
+function displaySpotlights(members) {
+    const spotlightContainer = document.getElementById('spotlight-container');
+    spotlightContainer.innerHTML = ''; // Clear previous spotlights
+
+    const filteredMembers = members.filter(member => member.membership_level === 'Gold' || member.membership_level === 'Silver');
+    const randomSpotlights = getRandomMembers(filteredMembers, 3); // Select 3 random members
+
+    randomSpotlights.forEach(member => {
+        const spotlightCard = document.createElement('div');
+        spotlightCard.classList.add('spotlight-card');
+
+        spotlightCard.innerHTML = `
+            <h3>${member.name}</h3>
+            <img src="${member.image}" alt="${member.name}">
+            <p>Phone: ${member.phone}</p>
+            <p>Address: ${member.address}</p>
+            <p>Website: <a href="${member.website}" target="_blank">${member.website}</a></p>
+            <p>Membership Level: ${member.membership_level}</p>
+        `;
+
+        spotlightContainer.appendChild(spotlightCard);
+    });
+}
+
+// Helper to get random members
+function getRandomMembers(members, count) {
+    const randomMembers = [];
+    while (randomMembers.length < count) {
+        const randomIndex = Math.floor(Math.random() * members.length);
+        const randomMember = members[randomIndex];
+        if (!randomMembers.includes(randomMember)) {
+            randomMembers.push(randomMember);
+        }
+    }
+    return randomMembers;
+}
