@@ -50,3 +50,10 @@
     color: white;
     border-radius: 5px;
 }
+
+/* Main navigation */
+nav {
+    display: flex;
+    justify-content: space-between; /* Distribute navigation items */
+    align-items: center; /* Center items vertically */
+}
