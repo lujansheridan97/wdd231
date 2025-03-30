@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Tech Solutions Inc.",
+        "address": "123 Tech St, Silicon Valley, CA",
+        "phone": "123-456-7890",
+        "website": "https://www.techsolutions.com",
+        "image": "images/techsolutions.jpg",
+        "membership_level": 1,
+        "other_info": "Providing innovative software solutions."
+    },
+    {
+        "name": "Green Energy Corp.",
+        "address": "456 Green Rd, Eco City, CA",
+        "phone": "987-654-3210",
+        "website": "https://www.greenenergy.com",
+        "image": "images/greenenergy.jpg",
+        "membership_level": 2,
+        "other_info": "Sustainability through renewable energy."
+    },
+    {
+        "name": "Healthy Foods Ltd.",
+        "address": "789 Healthy Ln, Greenfield, NY",
+        "phone": "555-123-4567",
+        "website": "https://www.healthyfoods.com",
+        "image": "images/healthyfoods.jpg",
+        "membership_level": 3,
+        "other_info": "Organic food for a healthier life."
+    },
+    {
+        "name": "Web Innovators",
+        "address": "101 Web St, Tech Hub, CA",
+        "phone": "222-333-4444",
+        "website": "https://www.webinnovators.com",
+        "image": "images/webinnovators.jpg",
+        "membership_level": 3,
+        "other_info": "Pushing the boundaries of web development."
+    },
+    {
+        "name": "AutoTech Industries",
+        "address": "123 Auto Ave, Motor City, MI",
+        "phone": "555-888-7777",
+        "website": "https://www.autotech.com",
+        "image": "images/autotech.jpg",
+        "membership_level": 2,
+        "other_info": "Leading innovations in automotive technology."
+    },
+    {
+        "name": "Design Co.",
+        "address": "321 Design Rd, Creative City, CA",
+        "phone": "444-555-6666",
+        "website": "https://www.designco.com",
+        "image": "images/designco.jpg",
+        "membership_level": 1,
+        "other_info": "Designing with creativity and precision."
+    },
+    {
+        "name": "Eco Fabrics",
+        "address": "678 Green Fabrics, Fashion City, NY",
+        "phone": "777-666-5555",
+        "website": "https://www.ecofabrics.com",
+        "image": "images/ecofabrics.jpg",
+        "membership_level": 1,
+        "other_info": "Sustainable and eco-friendly fabrics."
+    }
+]

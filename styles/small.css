@@ -130,3 +130,11 @@ button {
 #membersDirectory {
     grid-template-columns: 1fr;
 }
+
+
+/* small.css (Mobile and tablet view) */
+.grid-view {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on small screens */
+    gap: 10px;
+}
