@@ -1,0 +1,18 @@
+[
+    {
+        "name": "John Doe",
+        "address": "123 Main St, City, Country",
+        "phone": "(123) 456-7890",
+        "website": "http://johndoe.com",
+        "image": "john.jpg",
+        "membership_level": "Gold"
+    },
+    {
+        "name": "Jane Smith",
+        "address": "456 Elm St, City, Country",
+        "phone": "(987) 654-3210",
+        "website": "http://janesmith.com",
+        "image": "jane.jpg",
+        "membership_level": "Silver"
+    }
+]

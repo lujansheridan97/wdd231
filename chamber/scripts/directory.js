@@ -1,29 +1,22 @@
 document.addEventListener("DOMContentLoaded", async () => {
-    // Fetch the member data from the JSON file
     const membersData = await fetchMembersData();
-
-    // Display members in grid or list view
     displayMembers(membersData);
 
-    // Setup view toggle buttons
     document.getElementById('gridView').addEventListener('click', () => toggleView('grid'));
     document.getElementById('listView').addEventListener('click', () => toggleView('list'));
 
-    // Display the copyright year and last modification date
     displayFooterInfo();
 });
 
-// Fetch member data from members.json
 async function fetchMembersData() {
     const response = await fetch('data/members.json');
     const data = await response.json();
     return data;
 }
 
-// Display members in the selected view
 function displayMembers(members) {
     const memberContainer = document.getElementById('membersDirectory');
-    memberContainer.innerHTML = ''; // Clear existing content
+    memberContainer.innerHTML = '';
 
     members.forEach(member => {
         const memberCard = document.createElement('div');
@@ -43,7 +36,6 @@ function displayMembers(members) {
     });
 }
 
-// Toggle between grid and list view
 function toggleView(viewType) {
     const memberContainer = document.getElementById('membersDirectory');
     if (viewType === 'grid') {
@@ -55,7 +47,6 @@ function toggleView(viewType) {
     }
 }
 
-// Return the membership level as a string
 function getMembershipLevel(level) {
     switch(level) {
         case 1: return 'Member';
@@ -65,7 +56,6 @@ function getMembershipLevel(level) {
     }
 }
 
-// Display the copyright year and last modification date
 function displayFooterInfo() {
     const currentYear = new Date().getFullYear();
     const lastModifiedDate = new Date(document.lastModified).toLocaleString();
