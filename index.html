@@ -28,28 +28,26 @@
         <nav id="navMenu">
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="chamber.html">Chamber</a></li> <!-- Future Assignment Link -->
+                <li><a href="https://github.com/lujansheridan97" target="_blank">GitHub Profile</a></li> <!-- GitHub Link -->
+                <li><a href="https://www.linkedin.com/in/lujan-ruiz-diaz-f/" target="_blank">LinkedIn</a></li> <!-- LinkedIn Link -->
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- H1 Added to match the page's title -->
+        <!-- Home page header using h1 -->
         <h1>WDD 231 Home Page - Lujan Ruiz Diaz Franco</h1>
 
         <!-- First Section -->
         <section id="coursesSection">
             <h2>Available Courses</h2>
-            <!-- Filter Buttons -->
             <div id="courseFilters">
                 <button id="allCourses">All Courses</button>
                 <button id="wddCourses">WDD Courses</button>
                 <button id="cseCourses">CSE Courses</button>
             </div>
-            <!-- Course List Container -->
             <div id="courseList"></div>
-            <!-- Total Credits -->
             <p id="totalCredits">Total Credits: 0</p>
         </section>
 
@@ -67,8 +65,14 @@
     </main>
 
     <footer>
+        <!-- Footer with dynamic year -->
         <p>&copy; <span id="currentyear"></span> Lujan Ruiz Diaz | Argentina</p>
         <p id="lastModified"></p>
     </footer>
+
+    <script>
+        // JavaScript to dynamically update current year
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
