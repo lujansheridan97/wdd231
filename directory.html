@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chamber of Commerce Directory - Lujan Ruiz Diaz Franco">
+    <meta name="author" content="Lujan Ruiz Diaz Franco">
+    <meta property="og:title" content="Chamber of Commerce Directory - Lujan Ruiz Diaz Franco">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/chamber-favicon.png"> <!-- Placeholder for image -->
+    <meta property="og:url" content="https://yourwebsite.com/directory.html">
+    <title>Chamber of Commerce Directory - Lujan Ruiz Diaz Franco</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/chamber-favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+   
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="images/profile-picture.jpg" alt="Profile picture">
+        <span>Lujan Ruiz Diaz</span>
+        <button id="menuButton">☰ Menu</button>
+        <nav id="navMenu">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="chamber.html">Chamber</a></li>
+                <li><a href="https://github.com/lujansheridan97" target="_blank">GitHub Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/lujan-ruiz-diaz-f/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Chamber of Commerce Directory</h1>
+
+        <!-- View toggle buttons -->
+        <div id="viewToggle">
+            <button id="gridView">Grid View</button>
+            <button id="listView">List View</button>
+        </div>
+
+        <!-- Directory content: Members List -->
+        <section id="membersDirectory">
+            <div class="member-card">
+                <h2>John Doe</h2>
+                <p>Business Owner</p>
+                <a href="mailto:john@example.com">Contact</a>
+            </div>
+            <div class="member-card">
+                <h2>Jane Smith</h2>
+                <p>Founder</p>
+                <a href="mailto:jane@example.com">Contact</a>
+            </div>
+            <!-- Additional member cards can be added here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Lujan Ruiz Diaz | Argentina</p>
+        <p id="lastModified"></p>
+        <p>Contact: lujan@example.com | WDD 231</p>
+
+        <!-- Main content for members -->
+<!-- Main content for members -->
+<main>
+    <!-- Toggle View Buttons -->
+    <div id="viewToggle">
+        <button id="gridView">Grid View</button>
+        <button id="listView">List View</button>
+    </div>
+
+    <!-- Member Directory -->
+    <div id="membersDirectory" class="grid-view"></div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; <span id="currentyear"></span> Lujan Ruiz Diaz | Argentina</p>
+    <p id="lastModified"></p>
+</footer>
+
+
+    <script>
+        // Dynamically update current year and last modified date
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+</body>
+</html>

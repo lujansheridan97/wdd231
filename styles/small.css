@@ -78,3 +78,55 @@ footer {
     background-color: #007BFF;
     color: white;
 }
+
+
+#navMenu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#navMenu.open {
+    display: flex;
+}
+
+#menuButton {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Main navigation */
+nav {
+    display: flex;
+    justify-content: space-between; /* Distribute navigation items */
+    align-items: center; /* Center items vertically */
+}
+
+/* small.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ECF0F1;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    background-color: #E74C3C;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Mobile-specific layout changes */
+#membersDirectory {
+    grid-template-columns: 1fr;
+}

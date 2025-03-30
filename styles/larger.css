@@ -57,3 +57,56 @@ nav {
     justify-content: space-between; /* Distribute navigation items */
     align-items: center; /* Center items vertically */
 }
+/* larger.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ECF0F1;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+button {
+    background-color: #E74C3C;
+    color: white;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+#membersDirectory {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* larger.css (For larger screens such as tablets or desktops) */
+.grid-view {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns on larger screens */
+    gap: 20px;
+}
+
+/* List View */
+.list-view {
+    display: block;
+}
+
+.member-card {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.member-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
