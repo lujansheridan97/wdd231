@@ -1,73 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chamber Home</title>
-    <link rel="stylesheet" href="styles/chamber.css">
-</head>
-<body>
+    <meta name="description" content="Chamber of Commerce - Home Page">
+    <meta name="author" content="Maria de Lujan Ruiz Diaz Franco">
+
+    <!-- meta card -->
+    <meta property="fb:app_id" content="620597497453520">
+    <meta property="og:title" content=" Chamber of Commerce - Home Page">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://lujansheridan97.github.io/wdd231/chamber/images/chamber.webp">
+    <meta property="og:url" content="https://lujansheridan97.github.io/wdd231/chamber/index.html">
+    <meta property="og:description" content="Learn about the history, demographics, and upcoming events in Puerto Rico.">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="Discover Puerto Rico">
+    <meta name="twitter:site" content="@seuTwitter">
+    <meta name="twitter:title" content="Discover Puerto Rico">
+    <meta name="twitter:description"
+        content="Chamber of Commerce - Home Page">
+    <meta name="twitter:image" content="https://lujansheridan97.github.io/wdd231/chamber/images/chamber.webp">
+    <meta name="twitter:url" content="https://lujansheridan97.github.io/wdd231/chamber/index.html">
+    <title> Chamber of Commerce - Home</title>
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/home.css">
+    
+    <script src="scripts/spotlights.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/footer.js" defer></script>
+    <script src="scripts/hamburger.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="icon" href="favicon.ico" type="image/favicom.png">
+    <link rel="apple-touch-icon" href="favicon.ico">
+  </head>
+
+  <body class="home">
     <header>
-        <h1>Welcome to the Chamber of Commerce</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+      <img src="images/chamber.jpg" alt="Chamber of Commerce">
+      <span>Chamber of Commerce</span>
     </header>
+
+    <nav>
+      <button id="menuBtn" aria-label="Open navigation menu"></button>
+      <ul id="navMenu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+
     <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <img src="images/hero.jpg" alt="Chamber of Commerce Community">
-            <h2>Connecting Businesses, Strengthening Communities</h2>
-            <a href="join.html" class="cta-button">Join the Chamber</a>
-        </section>
+      <!-- Hero Section -->
+      <section class="hero">
+        <img src="images/PR.jpg" alt="Welcome to Syracuse, Utah">
+        <h1>Welcome to Chamber of Commerce</h1>
+        <p>Connecting businesses and the community for a stronger economy.</p>
+        <a href="join.html" class="cta-button">Join the Chamber</a>
+      </section>
+
+      
+
+      <!-- events -->
+      <section class="events">
         
-        <!-- About Section -->
-        <section class="about">
-            <h2>About the Chamber</h2>
-            <p>Our Chamber of Commerce is dedicated to fostering economic growth and community development. We provide networking opportunities, business resources, and advocacy for local businesses.</p>
-        </section>
+        <h2>Upcoming Events</h2>
+        <div class="event">
+          <h3> Farmers Market</h3>
+          <p>📅 Every Saturday - 8:00 AM | <a href="https://maps.app.goo.gl/aqt4eY2ee29ce9t86" target="_blank">At the Syracuse Regional Museum</a></p>
+          <a href="https://www.syracuseut.gov/calendar.aspx" target="_blank">
+            View the Full San Juan City Event Calendar
+        </a>
+        
 
-        <!-- Events Section -->
-        <section class="events">
-            <h2>Upcoming Events</h2>
-            <p>Stay updated with our latest events, workshops, and business meetups.</p>
-        </section>
+        </div>
+        <div class="event">
+          <h3> City Calender</h3>
+          <a href="https://www.syracuseut.gov/calendar.aspx" target="_blank">
+            Learn More About Upcoming Community Events in San Juan
+        </a>
+        
+        </div>
+        
+      </section>
 
-        <!-- Weather Section -->
-        <section class="weather">
-            <h2>Local Weather</h2>
-            <p>Current temperature and conditions: <span id="weather-info">Loading...</span></p>
-        </section>
+      <!-- spotlights -->
+      <section class="business-spotlight">
+        <h2>Business Spotlights</h2>
+    </section>
+            
 
-        <!-- Business Spotlights Section -->
-        <section class="spotlights">
-            <h2>Business Spotlights</h2>
-            <div class="spotlight">
-                <h3>Company One</h3>
-                <p>Innovative solutions for your business needs.</p>
-            </div>
-            <div class="spotlight">
-                <h3>Company Two</h3>
-                <p>Quality services and customer satisfaction.</p>
-            </div>
-            <div class="spotlight">
-                <h3>Company Three</h3>
-                <p>Leading the industry with excellence.</p>
-            </div>
-        </section>
+      <!-- Call to Action -->
+      <section class="slb">
+        <h2>Support Local Businesses</h2>
+        <p>Discover and support businesses in San Juan. Connect with professionals and local entrepreneurs.</p>
+        <a href="directory.html" class="slb-button">Browse Directory</a>
+      </section>
+
+      <!-- weather -->
+      <section id="weather-container">
+        <h2>Weather</h2>
+        <div class="weather-content">
+            <div id="current-weather"></div> 
+            <div id="weather-forecast"></div> 
+        </div>
+    </section>
+    
+    
     </main>
 
-    <!-- Footer Section -->
     <footer>
-        <p>&copy; 2025 Chamber of Commerce | <a href="privacy.html">Privacy Policy</a></p>
+      <p>&copy; <span id="currentyear"></span> Maria de Lujan Ruiz Diaz Franco - Puerto Rico</p>
+      <p id="lastModified">Last Modified: </p>
     </footer>
-
-    <!-- Weather Script -->
-    <script src="scripts/weather.js"></script>
-</body>
+  </body>
 </html>

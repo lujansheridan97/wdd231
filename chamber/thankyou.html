@@ -3,112 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank You</title>
-    <link rel="stylesheet" href="styles/chamber.css">
+    <meta name="description" content="Thank you for joining the Chamber of Commerce">
+    <meta name="author" content="Mariaa de Lujan Ruiz Diaz Franco">
+    
+    <title>Thank You - Chamber of Commerce </title>
+
+    <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
+    <link rel="stylesheet" href="styles/thankyou.css">
+    
+    <script src="scripts/thankyou.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
+      
         <h1>Thank You for Joining!</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="directory.html">Directory</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
-    
+
     <main>
-        <section class="thank-you">
-            <h2>Thank You for Your Submission!</h2>
-            <p>We appreciate your interest in joining the Chamber of Commerce. Below is the information you provided:</p>
+        <section id="confirmation">
+            <h2>Membership Confirmation</h2>
+            <p>Thank you, <span id="user-name"></span>, for submitting your application to join the Chamber of Commerce!</p>
+            <p>Here is the information you submitted:</p>
             
-            <div class="form-data">
+            <div class="info-container">
                 <p><strong>First Name:</strong> <span id="first-name"></span></p>
                 <p><strong>Last Name:</strong> <span id="last-name"></span></p>
                 <p><strong>Email:</strong> <span id="email"></span></p>
-                <p><strong>Mobile Phone:</strong> <span id="phone"></span></p>
-                <p><strong>Business Name:</strong> <span id="business"></span></p>
-                <p><strong>Membership Level:</strong> <span id="membership"></span></p>
-                <p><strong>Submission Date:</strong> <span id="timestamp"></span></p>
+                <p><strong>Phone:</strong> <span id="phone"></span></p>
+                <p><strong>Business Name:</strong> <span id="business-name"></span></p>
+                <p><strong>Application Date:</strong> <span id="timestamp"></span></p>
             </div>
-        </section>
 
-        <section class="membership-cards">
-            <div class="card" onclick="openModal('npModal')">
-                <h3>NP Membership</h3>
-                <p>For non-profits, no fee.</p>
-                <button>Learn More</button>
-            </div>
-            <div class="card" onclick="openModal('bronzeModal')">
-                <h3>Bronze Membership</h3>
-                <p>Basic membership with standard benefits.</p>
-                <button>Learn More</button>
-            </div>
-            <div class="card" onclick="openModal('silverModal')">
-                <h3>Silver Membership</h3>
-                <p>Enhanced membership with additional perks.</p>
-                <button>Learn More</button>
-            </div>
-            <div class="card" onclick="openModal('goldModal')">
-                <h3>Gold Membership</h3>
-                <p>Premium membership with all benefits.</p>
-                <button>Learn More</button>
-            </div>
+            <a href="index.html" class="btn">Return to Home</a>
         </section>
-
-        <div id="npModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('npModal')">&times;</span>
-                <h2>NP Membership</h2>
-                <p>No fee. Access to networking events and training.</p>
-            </div>
-        </div>
-        <div id="bronzeModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('bronzeModal')">&times;</span>
-                <h2>Bronze Membership</h2>
-                <p>Standard benefits, access to chamber events.</p>
-            </div>
-        </div>
-        <div id="silverModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('silverModal')">&times;</span>
-                <h2>Silver Membership</h2>
-                <p>Additional advertising benefits and priority event access.</p>
-            </div>
-        </div>
-        <div id="goldModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('goldModal')">&times;</span>
-                <h2>Gold Membership</h2>
-                <p>Full benefits including spotlight promotions and discounts.</p>
-            </div>
-        </div>
     </main>
-    
-    <footer>
-        <p>&copy; 2025 Chamber of Commerce | <a href="privacy.html">Privacy Policy</a></p>
-    </footer>
-    
-    <script>
-        function openModal(id) {
-            document.getElementById(id).style.display = 'block';
-        }
-        function closeModal(id) {
-            document.getElementById(id).style.display = 'none';
-        }
 
-        // Retrieve URL parameters and display them
-        const params = new URLSearchParams(window.location.search);
-        document.getElementById('first-name').textContent = params.get('first-name') || "N/A";
-        document.getElementById('last-name').textContent = params.get('last-name') || "N/A";
-        document.getElementById('email').textContent = params.get('email') || "N/A";
-        document.getElementById('phone').textContent = params.get('phone') || "N/A";
-        document.getElementById('business').textContent = params.get('business') || "N/A";
-        document.getElementById('membership').textContent = params.get('membership') || "N/A";
-        document.getElementById('timestamp').textContent = params.get('timestamp') || "N/A";
+    <footer>
+        <p>&copy; <span id="currentyear"></span> Maria de Lujan Ruiz Diaz Franco - Puerto Rico</p>
+        <p id="lastModified">Last Modified: </p>
+      </footer>
+
+    <script>
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
     </script>
+
 </body>
 </html>
