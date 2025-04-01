@@ -5,7 +5,9 @@
         "phone": "(123) 456-7890",
         "website": "http://johndoe.com",
         "image": "john.jpg",
-        "membership_level": "Gold"
+        "membership_level": "Gold",
+        "logo": "john-logo.png",
+        "email": "contact@johndoe.com"
     },
     {
         "name": "Jane Smith",
@@ -13,6 +15,8 @@
         "phone": "(987) 654-3210",
         "website": "http://janesmith.com",
         "image": "jane.jpg",
-        "membership_level": "Silver"
+        "membership_level": "Silver",
+        "logo": "jane-logo.png",
+        "email": "contact@janesmith.com"
     }
 ]

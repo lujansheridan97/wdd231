@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join the Chamber</title>
+    <link rel="stylesheet" href="styles/chamber.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Chamber of Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="join">
+            <h2>Join the Chamber</h2>
+            <p>Become a member of the Chamber of Commerce to enjoy networking opportunities, business resources, and community support.</p>
+            
+            <form action="submit_form.php" method="POST">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="business">Business Name:</label>
+                <input type="text" id="business" name="business">
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone">
+                
+                <label for="message">Why do you want to join?</label>
+                <textarea id="message" name="message" rows="4"></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Chamber of Commerce | <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
+</body>
+</html>

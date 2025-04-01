@@ -3,7 +3,7 @@
 
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -16,6 +16,7 @@ header {
     color: white;
     padding: 20px 0;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 nav ul {
@@ -109,6 +110,92 @@ section {
     text-align: center;
 }
 
+/* Thank You Page */
+.thank-you {
+    text-align: center;
+    padding: 50px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 50px auto;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.thank-you h2 {
+    color: #004080;
+    margin-bottom: 20px;
+}
+
+.thank-you p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-data {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.form-data p {
+    font-size: 1em;
+    margin: 5px 0;
+    color: #555;
+}
+
+/* Form Styles */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #333;
+    background-color: #f9f9f9;
+    transition: border 0.3s ease, background-color 0.3s ease;
+}
+
+form input:focus, form select:focus, form textarea:focus {
+    border: 1px solid #004080;
+    background-color: #e8f4ff;
+    outline: none;
+}
+
+form label {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+form button {
+    background-color: #004080;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #003366;
+}
+
 /* Footer */
 footer {
     background: #004080;
@@ -116,4 +203,24 @@ footer {
     text-align: center;
     padding: 15px 0;
     margin-top: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .thank-you {
+        padding: 30px 15px;
+        margin: 30px auto;
+    }
+
+    .form-data {
+        padding: 15px;
+    }
+
+    form input, form select, form textarea {
+        padding: 10px 12px;
+    }
+
+    form button {
+        padding: 10px 18px;
+    }
 }
