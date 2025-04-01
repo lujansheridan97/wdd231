@@ -53,28 +53,21 @@
 
         <!-- Directory content: Members List -->
         <section id="membersDirectory">
-            <div class="member-card">
-                <h2>John Doe</h2>
-                <p>Business Owner</p>
-                <a href="mailto:john@example.com">Contact</a>
-            </div>
-            <div class="member-card">
-                <h2>Jane Smith</h2>
-                <p>Founder</p>
-                <a href="mailto:jane@example.com">Contact</a>
-            </div>
+            <!-- Dynamic content will be inserted here -->
         </section>
     </main>
 
     <footer>
         <p>&copy; <span id="currentyear"></span> Lujan Ruiz Diaz | Argentina</p>
         <p id="lastModified"></p>
-        <p>Contact: lujan@example.com | WDD 231</p>
+        <p>Contact: lujan@gmail.com | WDD 231</p>
     </footer>
 
     <script>
         document.getElementById("currentyear").textContent = new Date().getFullYear();
         document.getElementById("lastModified").textContent = document.lastModified;
     </script>
+
+    <script src="scripts/directory.js" defer></script>
 </body>
 </html>
