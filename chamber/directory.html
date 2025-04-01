@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore the Chamber of Commerce Directory. ">
+    <meta name="description" content="Explore the Chamber of Commerce Directory.">
     <meta name="author" content="Maria de Lujan Ruiz Diaz Franco">
+
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Chamber of Commerce Directory - Lujan Ruiz Diaz Franco">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="images/favicom.jpg">
-    <meta property="og:url" content="https://yourwebsite.com/directory.html"> <!-- Update with actual live URL -->
+    <meta property="og:image" content="chamber/images/favicon.png"> <!-- Ruta correcta para la imagen -->
+    <meta property="og:url" content="https://lujansheridan97.github.io/wdd231/chamber.html"> <!-- Reemplaza con tu URL real -->
+
     <title>Chamber of Commerce Directory - Lujan Ruiz Diaz Franco</title>
 
-
     <!-- Favicon -->
-   
-    <link rel="icon" href="chamber/images/favicom.png" type="image/png">
+    <link rel="icon" href="chamber/images/favicon.png" type="image/png">
 
     <link rel="stylesheet" href="styles/chamber.css">
- 
 
     <!-- Preconnect to Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Link to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
     <script src="scripts/navigation.js" defer></script>
@@ -30,7 +31,6 @@
 </head>
 <body>
     <header>
-       
         <button id="menuButton" aria-label="Open menu">☰ Menu</button>
         <nav id="navMenu">
             <ul>
@@ -63,7 +63,6 @@
                 <p>Founder</p>
                 <a href="mailto:jane@example.com">Contact</a>
             </div>
-            <!-- Additional member cards can be added here -->
         </section>
     </main>
 
@@ -74,7 +73,6 @@
     </footer>
 
     <script>
-        // Dynamically update current year and last modified date
         document.getElementById("currentyear").textContent = new Date().getFullYear();
         document.getElementById("lastModified").textContent = document.lastModified;
     </script>
