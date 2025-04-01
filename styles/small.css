@@ -1,26 +1,21 @@
 /* Normalize styles */
 * {
-
-    body {
-        font-family: 'Poppins', sans-serif;
-    }
-    h1, h2, h3 {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
+    font-family: 'Poppins', sans-serif;
     max-width: 100%;
     margin: 0 auto;
     padding: 20px;
     background-color: #f4f4f4;
     color: #333;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -79,7 +74,6 @@ footer {
     color: white;
 }
 
-
 #navMenu {
     display: none;
     flex-direction: column;
@@ -101,29 +95,8 @@ footer {
 /* Main navigation */
 nav {
     display: flex;
-    justify-content: space-between; /* Distribute navigation items */
-    align-items: center; /* Center items vertically */
-}
-
-/* small.css */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #ECF0F1;
-    color: #333;
-    margin: 0;
-    padding: 0;
-}
-
-header {
-    padding: 10px;
-    text-align: center;
-}
-
-button {
-    background-color: #E74C3C;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* Mobile-specific layout changes */
@@ -131,10 +104,9 @@ button {
     grid-template-columns: 1fr;
 }
 
-
-/* small.css (Mobile and tablet view) */
+/* Mobile and tablet view */
 .grid-view {
     display: grid;
-    grid-template-columns: 1fr; /* Single column on small screens */
+    grid-template-columns: 1fr;
     gap: 10px;
 }
