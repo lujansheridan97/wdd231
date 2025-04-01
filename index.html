@@ -6,16 +6,20 @@
     <meta name="description" content="Home Page WDD231">
     <meta name="author" content="Lujan Ruiz Diaz Franco">
     <title>WDD 231 Home Page - Lujan Ruiz Diaz Franco</title>
+
+    <!-- External Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
 
     <!-- Preconnect to Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Link to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+    
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-   
+
+    <!-- JavaScript Files -->
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/course.js" defer></script>
@@ -29,17 +33,15 @@
             <ul>
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="chamber.html">Chamber</a></li> <!-- Future Assignment Link -->
-                <li><a href="https://github.com/lujansheridan97" target="_blank">GitHub Profile</a></li> <!-- GitHub Link -->
-                <li><a href="https://www.linkedin.com/in/lujan-ruiz-diaz-f/" target="_blank">LinkedIn</a></li> <!-- LinkedIn Link -->
+                <li><a href="https://github.com/lujansheridan97" target="_blank">GitHub Profile</a></li>
+                <li><a href="https://www.linkedin.com/in/lujan-ruiz-diaz-f/" target="_blank">LinkedIn</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- Home page header using h1 -->
         <h1>WDD 231 Home Page - Lujan Ruiz Diaz Franco</h1>
 
-        <!-- First Section -->
         <section id="coursesSection">
             <h2>Available Courses</h2>
             <div id="courseFilters">
@@ -51,13 +53,11 @@
             <p id="totalCredits">Total Credits: 0</p>
         </section>
 
-        <!-- Second Section -->
         <section id="aboutSection">
             <h2>About Me</h2>
             <p>Welcome to my WDD 231 course page. This is where I showcase my work and projects related to web development.</p>
         </section>
 
-        <!-- Third Section -->
         <section id="contactSection">
             <h2>Contact Information</h2>
             <p>You can contact me via email or through my professional profiles.</p>
@@ -65,13 +65,11 @@
     </main>
 
     <footer>
-        <!-- Footer with dynamic year -->
         <p>&copy; <span id="currentyear"></span> Lujan Ruiz Diaz | Argentina</p>
         <p id="lastModified"></p>
     </footer>
 
     <script>
-        // JavaScript to dynamically update current year
         document.getElementById("currentyear").textContent = new Date().getFullYear();
     </script>
 </body>
