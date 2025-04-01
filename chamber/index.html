@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Chamber of Commerce - Home Page">
@@ -8,7 +8,7 @@
 
     <!-- meta card -->
     <meta property="fb:app_id" content="620597497453520">
-    <meta property="og:title" content=" Chamber of Commerce - Home Page">
+    <meta property="og:title" content="Chamber of Commerce - Home Page">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://lujansheridan97.github.io/wdd231/chamber/images/chamber.webp">
     <meta property="og:url" content="https://lujansheridan97.github.io/wdd231/chamber/index.html">
@@ -18,11 +18,11 @@
     <meta name="twitter:card" content="Discover Puerto Rico">
     <meta name="twitter:site" content="@seuTwitter">
     <meta name="twitter:title" content="Discover Puerto Rico">
-    <meta name="twitter:description"
-        content="Chamber of Commerce - Home Page">
+    <meta name="twitter:description" content="Chamber of Commerce - Home Page">
     <meta name="twitter:image" content="https://lujansheridan97.github.io/wdd231/chamber/images/chamber.webp">
     <meta name="twitter:url" content="https://lujansheridan97.github.io/wdd231/chamber/index.html">
-    <title> Chamber of Commerce - Home</title>
+    
+    <title>Chamber of Commerce - Home</title>
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/home.css">
@@ -38,86 +38,83 @@
 
     <link rel="icon" href="favicon.ico" type="image/favicom.png">
     <link rel="apple-touch-icon" href="favicon.ico">
-  </head>
+</head>
 
-  <body class="home">
+<body class="home">
     <header>
-      <img src="images/chamber.jpg" alt="Chamber of Commerce">
-      <span>Chamber of Commerce</span>
+        <img src="images/chamber.jpg" alt="Chamber of Commerce Building">
+        <span>Chamber of Commerce</span>
     </header>
 
     <nav>
-      <button id="menuBtn" aria-label="Open navigation menu"></button>
-      <ul id="navMenu">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="discover.html">Discover</a></li>
-        <li><a href="directory.html">Directory</a></li>
-        <li><a href="join.html">Join</a></li>
-      </ul>
+        <button id="menuBtn" aria-label="Open navigation menu"></button>
+        <ul id="navMenu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="discover.html">Discover</a></li>
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="join.html">Join</a></li>
+        </ul>
     </nav>
 
     <main>
-      <!-- Hero Section -->
-      <section class="hero">
-        <img src="images/PR.jpg" alt="Welcome to Syracuse, Utah">
-        <h1>Welcome to Chamber of Commerce</h1>
-        <p>Connecting businesses and the community for a stronger economy.</p>
-        <a href="join.html" class="cta-button">Join the Chamber</a>
-      </section>
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="images/PR.jpg" alt="Welcome to Syracuse, Utah">
+            <h1>Welcome to Chamber of Commerce</h1>
+            <p>Connecting businesses and the community for a stronger economy.</p>
+            <a href="join.html" class="cta-button">Join the Chamber</a>
+        </section>
 
-      
+        <!-- Upcoming Events Section -->
+        <section class="events">
+            <h2>Upcoming Events</h2>
+            <div class="event">
+                <h3> Farmers Market</h3>
+                <p>📅 Every Saturday - 8:00 AM | <a href="https://maps.app.goo.gl/aqt4eY2ee29ce9t86" target="_blank">At the Syracuse Regional Museum</a></p>
+                <a href="https://www.syracuseut.gov/calendar.aspx" target="_blank">
+                    View the Full San Juan City Event Calendar
+                </a>
+            </div>
+            <div class="event">
+                <h3> City Calendar</h3>
+                <a href="https://www.syracuseut.gov/calendar.aspx" target="_blank">
+                    Learn More About Upcoming Community Events in San Juan
+                </a>
+            </div>
+        </section>
 
-      <!-- events -->
-      <section class="events">
-        
-        <h2>Upcoming Events</h2>
-        <div class="event">
-          <h3> Farmers Market</h3>
-          <p>📅 Every Saturday - 8:00 AM | <a href="https://maps.app.goo.gl/aqt4eY2ee29ce9t86" target="_blank">At the Syracuse Regional Museum</a></p>
-          <a href="https://www.syracuseut.gov/calendar.aspx" target="_blank">
-            View the Full San Juan City Event Calendar
-        </a>
-        
+        <!-- Business Spotlight Section -->
+        <section class="business-spotlight">
+            <h2>Business Spotlights</h2>
+            <div id="spotlight-container"></div> <!-- Dynamic Spotlight Members -->
+        </section>
 
-        </div>
-        <div class="event">
-          <h3> City Calender</h3>
-          <a href="https://www.syracuseut.gov/calendar.aspx" target="_blank">
-            Learn More About Upcoming Community Events in San Juan
-        </a>
-        
-        </div>
-        
-      </section>
+        <!-- Call to Action Section -->
+        <section class="slb">
+            <h2>Support Local Businesses</h2>
+            <p>Discover and support businesses in San Juan. Connect with professionals and local entrepreneurs.</p>
+            <a href="directory.html" class="slb-button">Browse Directory</a>
+        </section>
 
-      <!-- spotlights -->
-      <section class="business-spotlight">
-        <h2>Business Spotlights</h2>
-    </section>
-            
-
-      <!-- Call to Action -->
-      <section class="slb">
-        <h2>Support Local Businesses</h2>
-        <p>Discover and support businesses in San Juan. Connect with professionals and local entrepreneurs.</p>
-        <a href="directory.html" class="slb-button">Browse Directory</a>
-      </section>
-
-      <!-- weather -->
-      <section id="weather-container">
-        <h2>Weather</h2>
-        <div class="weather-content">
-            <div id="current-weather"></div> 
-            <div id="weather-forecast"></div> 
-        </div>
-    </section>
-    
-    
+        <!-- Weather Section -->
+        <section id="weather-container">
+            <h2>Weather</h2>
+            <div class="weather-content">
+                <div id="current-weather"></div>
+                <div id="weather-forecast"></div> <!-- Dynamic Weather Forecast -->
+            </div>
+        </section>
     </main>
 
     <footer>
-      <p>&copy; <span id="currentyear"></span> Maria de Lujan Ruiz Diaz Franco - Puerto Rico</p>
-      <p id="lastModified">Last Modified: </p>
+        <p>&copy; <span id="currentyear"></span> Maria de Lujan Ruiz Diaz Franco - Puerto Rico</p>
+        <p id="lastModified">Last Modified: </p>
     </footer>
-  </body>
+
+    <!-- Dynamic Year and Last Modified Script -->
+    <script>
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent += new Date(document.lastModified).toLocaleString();
+    </script>
+</body>
 </html>
