@@ -1,4 +1,4 @@
-/* Reset some basic styles */
+/* Normalize the styles for consistency */
 *,
 *::before,
 *::after {
@@ -7,182 +7,133 @@
   box-sizing: border-box;
 }
 
-/* Set body font and general layout */
+html {
+  font-size: 100%;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #f8f8f8;
-  padding-top: 5rem; /* To avoid overlap with fixed header */
+  color: #333; /* Dark text for good contrast */
+  background-color: #f8f8f8; /* Light background */
 }
 
-header {
-  text-align: center;
-  background-color: #004d99;
-  color: white;
-  padding: 1.5rem 0;
-}
-
-header img {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
-  margin-bottom: 1rem;
-}
-
-header span {
-  display: block;
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-
-nav {
-  background-color: #333;
-}
-
-nav button {
-  display: none; /* Hidden for larger screens */
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
+ul,
+ol {
   list-style: none;
-  background-color: #333;
-  margin: 0;
-  padding: 1rem 0;
 }
 
-nav ul li {
-  margin-right: 2rem;
-}
-
-nav ul li a {
-  color: white;
+a {
   text-decoration: none;
-  font-size: 1.1rem;
-  font-weight: 500;
+  color: inherit;
 }
 
-nav ul li a.active {
-  border-bottom: 2px solid #ffcc00;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-nav ul li a:hover {
-  text-decoration: underline;
+input,
+button,
+textarea {
+  font: inherit;
 }
 
-/* Form Container */
-.main {
-  padding: 3rem;
-  max-width: 1200px;
+/* General Layout */
+header {
+  background-color: #013a63; /* Dark background for header */
+  color: #fff; /* White text for contrast */
+  text-align: center;
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 2.5rem;
+}
+
+/* Section */
+main {
+  padding: 40px 20px;
+  background-color: #fff; /* White background for content */
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+  color: #013a63; /* Dark blue for headings */
+}
+
+section {
+  max-width: 800px;
   margin: 0 auto;
 }
 
-h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-.membership-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-#membership-form {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 600px;
-  margin-top: 2rem;
-}
-
-#membership-form h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-size: 1.8rem;
-}
-
-#membership-form label {
-  display: block;
-  margin-bottom: 1rem;
+#confirmation p {
   font-size: 1.1rem;
+  color: #333;
 }
 
-#membership-form input,
-#membership-form select,
-#membership-form textarea {
-  width: 100%;
-  padding: 0.8rem;
+#confirmation .info-container p {
   font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  margin-top: 0.3rem;
+  color: #333;
 }
 
-#membership-form button {
-  width: 100%;
-  padding: 1rem;
-  background-color: #004d99;
-  color: white;
-  font-size: 1.1rem;
-  border: none;
-  border-radius: 4px;
+button,
+a.btn {
+  background-color: #000; /* Black background for buttons */
+  color: #fff; /* White text for buttons */
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
   cursor: pointer;
-  margin-top: 1rem;
+  transition: background 0.3s ease-in-out;
 }
 
-#membership-form button:hover {
-  background-color: #003366;
+button:hover,
+a.btn:hover {
+  background-color: #013a63; /* Hover state for buttons */
 }
 
-/* Mobile responsiveness */
-@media screen and (max-width: 768px) {
-  header img {
-    max-width: 200px;
+footer {
+  background-color: #013a63; /* Dark footer background */
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    padding: 15px 0;
   }
 
-  nav ul {
-    flex-direction: column;
-    padding: 0;
+  main {
+    padding: 30px 20px;
   }
 
-  nav ul li {
-    margin-bottom: 1rem;
+  h1 {
+    font-size: 2rem;
   }
 
-  nav button {
-    display: inline-block;
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 1rem;
-    cursor: pointer;
-    font-size: 1.2rem;
-    width: 100%;
-    text-align: left;
+  #confirmation p {
+    font-size: 1rem;
   }
-
-  .membership-container {
-    flex-direction: column;
-  }
-
-  #membership-form {
-    width: 100%;
-    margin: 0;
+  
+  footer {
+    font-size: 0.8rem;
   }
 }
 
-/* Accessibility */
-a:focus,
-button:focus,
-input:focus,
-select:focus,
-textarea:focus {
-  outline: 3px solid #ffcc00;
-  outline-offset: 2px;
-}
