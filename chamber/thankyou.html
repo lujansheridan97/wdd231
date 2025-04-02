@@ -8,9 +8,7 @@
     
     <title>Thank You - Chamber of Commerce </title>
 
-    <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
     <link rel="stylesheet" href="styles/thankyou.css">
-    
     <script src="scripts/thankyou.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,12 +17,11 @@
 </head>
 <body>
     <header>
-      
         <h1>Thank You for Joining!</h1>
     </header>
 
-    <main>
-        <section id="confirmation">
+    <main role="main">
+        <section id="confirmation" aria-live="polite">
             <h2>Membership Confirmation</h2>
             <p>Thank you, <span id="user-name"></span>, for submitting your application to join the Chamber of Commerce!</p>
             <p>Here is the information you submitted:</p>
@@ -38,18 +35,13 @@
                 <p><strong>Application Date:</strong> <span id="timestamp"></span></p>
             </div>
 
-            <a href="index.html" class="btn">Return to Home</a>
+            <a href="index.html" class="btn" role="button" tabindex="0">Return to Home</a>
         </section>
     </main>
 
-    <footer>
+    <footer aria-label="Site information">
         <p>&copy; <span id="currentyear"></span> Maria de Lujan Ruiz Diaz Franco - Puerto Rico</p>
         <p id="lastModified">Last Modified: </p>
-      </footer>
-
-    <script>
-        document.getElementById("currentyear").textContent = new Date().getFullYear();
-    </script>
-
+    </footer>
 </body>
 </html>

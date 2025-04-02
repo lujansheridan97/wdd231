@@ -1,495 +1,188 @@
+/* Reset some basic styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set body font and general layout */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f8f8f8;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f8f8;
+  padding-top: 5rem; /* To avoid overlap with fixed header */
 }
-/* side by side */.membership-container {
+
+header {
+  text-align: center;
+  background-color: #004d99;
+  color: white;
+  padding: 1.5rem 0;
+}
+
+header img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+header span {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+nav {
+  background-color: #333;
+}
+
+nav button {
+  display: none; /* Hidden for larger screens */
+}
+
+nav ul {
   display: flex;
-  flex-direction: column; /* Default para telas pequenas */
-  gap: 20px;
-  align-items: stretch;
+  justify-content: center;
+  list-style: none;
+  background-color: #333;
+  margin: 0;
+  padding: 1rem 0;
 }
 
-#membership-benefits,
+nav ul li {
+  margin-right: 2rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+nav ul li a.active {
+  border-bottom: 2px solid #ffcc00;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Form Container */
+.main {
+  padding: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.membership-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 #membership-form {
-  background: #f8f8f8;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin-top: 2rem;
 }
 
-/* Ajuste para telas maiores */
-@media (min-width: 768px) {
-  .membership-container {
-    flex-direction: row; /* Deixa lado a lado */
-    justify-content: space-between;
-  }
-
-  #membership-benefits {
-    width: 45%;
-  }
-
-  #membership-form {
-    width: 50%;
-  }
-}
-
-
-/* form */
-#membership-benefits {
-    display: grid;
-    text-align: center;
-    background: #f8f8f8;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    border: 1px solid #000;
-}
-
-
-
-.membership-levels {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.membership-card {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 280px;
-    transition: transform 0.2s ease-in-out;
-}
-
-.membership-card:hover {
-    transform: scale(1.05);
-}
-
-.membership-card h3 {
-    font-size: 1.5rem;
-    color: #013a63;
-    margin-bottom: 10px;
-}
-
-.membership-card p {
-    font-size: 1rem;
-    color: #333;
-    margin: 5px 0;
-}
-
-.membership-card .price {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #005fa3;
-    margin-top: 10px;
-}
-
-/* Membership Application Form */
-#membership-form {
-    background: #f8f8f8;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 0 auto 30px;
-    border: 1px solid #000;
-    
-}
-
-#membership-form form {
-    display: flex;
-    flex-direction: column;
-    
+#membership-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
 }
 
 #membership-form label {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-top: 10px;
-    color: #013a63;
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
 }
 
 #membership-form input,
 #membership-form select,
 #membership-form textarea {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 5px;
-    width: 100%;
-}
-
-#membership-form textarea {
-    resize: vertical;
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 0.3rem;
 }
 
 #membership-form button {
-    background: #000;
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    transition: background 0.3s ease-in-out;
+  width: 100%;
+  padding: 1rem;
+  background-color: #004d99;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
 }
 
 #membership-form button:hover {
-    background: #013a63;
-}
-/* Modal: Hidden by default */
-.modal {
-    display: none; /* Ocultar por padrão */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+  background-color: #003366;
 }
 
-/* */
-.modal.show {
-    display: flex;
-    opacity: 1;
-}
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+  header img {
+    max-width: 200px;
+  }
 
-/* Modal content */
-.modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 400px;
-    text-align: center;
-    position: relative;
-    animation: fadeInModal 0.3s ease-in-out;
-}
-.modal-content ul {
-    list-style: none; 
-    padding: 0; 
-    margin: 0; 
-}
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
 
-.modal-content ul li {
-    padding-left: 0; 
-}
+  nav ul li {
+    margin-bottom: 1rem;
+  }
 
-
-/*  */
-@keyframes fadeInModal {
-    from {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-/* Close button */
-.close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: #013a63;
-    transition: color 0.3s ease-in-out;
-}
-
-.close:hover {
-    color: red;
-}
-
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .membership-levels {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .membership-card {
-        width: 90%;
-    }
-
-    #membership-form {
-        width: 90%;
-    }
-}
-
-.membership-card {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 1s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-
-/* footer */
-footer {
-    text-align: center;
-    padding: 15px;
-    background: #013a63;
+  nav button {
+    display: inline-block;
+    background-color: #333;
     color: white;
-    border-radius: 8px;
-}
-/*x */
-@media (min-width: 764px) {
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 100%;
+    text-align: left;
+  }
 
-    body {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-    /* Header */
-    header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        text-align: center;
-        background: #013a63;
-        border-radius: 8px;
-    }
+  .membership-container {
+    flex-direction: column;
+  }
 
-    header img {
-        width: 70px;
-        margin: 5px;
-        border-radius: 15px;
-    }
-
-    header span {
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: white;
-    }
-
-    /* Menu */
-    nav {
-        background-color: #36454f;
-        border-radius: 8px;
-        padding: 10px;
-    }
-      nav button {
-        display: none;
-    }
-    nav ul {
-        display: flex;
-        justify-content: space-around;
-        list-style: none;
-    }
-
-    nav ul li a {
-        font-size: 20px;
-        color: white;
-        text-decoration: none;
-        display: inline-block;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    nav ul li a:hover {
-        text-decoration: underline;
-        transform: scale(1.2);
-    }
-
-    nav ul li a.active {
-        background-color: #005fa3;
-        color: white;
-        font-weight: bold;
-        border-radius: 5px;
-        padding: 8px 12px;
-        text-decoration: none;
-    }
-    h1, h2, h4 {
-        text-align: center;
-        font-size: 3rem; 
-        padding: 10px;
-        background: #013a63;
-        color: white;
-        border-radius: 8px;
-        margin-bottom: 10px;
-        width: 100%;
-    }
-    
-    main {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 30px;
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
-    }
+  #membership-form {
+    width: 100%;
+    margin: 0;
+  }
 }
 
-
-/* small sizes */
-@media (max-width: 763px) {
-    body {
-        background-color: #f8f8f8;
-        margin: 0 auto;
-    }
-
-    /* Header */
-    header {
-        display: flex;
-        color: #fff;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        text-align: center;
-        background: #013a63;
-        padding: 10px;
-        border-radius: 8px;
-    }
-
-    header img {
-        width: 50px;
-        margin: 5px;
-        border-radius: 15px;
-    }
-
-    header span {
-        font-size: 1.5rem;
-        font-weight: 600;
-    }
-
-    /* Navigation */
-    /* menu*/
-    nav {
-        background: #333;
-        border-radius: 8px;
-        position: relative;
-        padding: 10px;
-    }
-
-    /* button */
-    #menuBtn {
-        background: none;
-        border: none;
-        font-size: 24px;
-        color: white;
-        cursor: pointer;
-        display: block;
-        position: relative;
-    }
-
-    /* hamburguer */
-    #menuBtn::before {
-        content: "☰";
-        font-size: 24px;
-    }
-
-    #menuBtn.open::before {
-        content: "✖";
-        font-size: 24px;
-        background-color: #005fa3;
-
-    }
-
-    /* Menu  */
-    nav ul {
-        display: none;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        background: #444;
-        border-radius: 8px;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-    }
-
-    nav ul.show {
-        display: block;
-        position: static;
-        width: 100%;
-        padding: 10px 0;
-    }
-      /* menu */
-    nav ul li {
-        padding: 10px;
-        text-align: center;
-    }
-
-    nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 18px;
-        display: block;
-        padding: 5px;
-    }
-
-    
-    nav ul li a.active {
-        background-color: #005fa3;
-        color: white;
-        font-weight: bold;
-        border-radius: 5px;
-        padding: 8px 12px;
-        text-decoration: none;
-    }
-    /* Main Content */
-    main {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        padding: 20px;
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
-    }
-
-    h1, h4 {
-        text-align: center;
-        padding: 10px;
-        background: #013a63;
-        color: white;
-        border-radius: 8px;
-        margin-bottom: 10px;
-        width: 100%;
-        font-size: 2rem;
-
-    }
-    h2 {
-        text-align: center;
-        padding: 10px;
-        background: #013a63;
-        color: white;
-        border-radius: 8px;
-        margin-bottom: 10px;
-        width: 100%;
-        font-size: 1.5rem;
-    }
-    footer {
-        font-size: 0.9rem;
-    }
-    
-
+/* Accessibility */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #ffcc00;
+  outline-offset: 2px;
 }

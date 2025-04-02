@@ -1,4 +1,6 @@
-/* normalize.css */
+/* Normalize.css - A modern, HTML5-ready alternative to CSS resets */
+
+/* 1. Use border-box for all elements */
 *,
 *::before,
 *::after {
@@ -7,33 +9,106 @@
   box-sizing: border-box;
 }
 
+/* 2. Set base font size and line height */
 html {
-  font-size: 100%;
+  font-size: 100%; /* 1rem = 16px */
 }
 
+/* 3. Use Roboto font as the base for all elements */
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   color: #333;
+  background-color: #f8f8f8; /* Light background for readability */
 }
 
+/* 4. Ensure no list-style for lists */
 ul,
 ol {
   list-style: none;
 }
 
+/* 5. Prevent links from being styled differently */
 a {
   text-decoration: none;
   color: inherit;
 }
 
+/* 6. Image responsiveness */
 img {
   max-width: 100%;
   height: auto;
 }
 
+/* 7. Form elements should inherit font */
 input,
 button,
-textarea {
+textarea,
+select {
   font: inherit;
+}
+
+/* 8. Add focus styles for accessibility */
+a:focus,
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid #ffcc00; /* Bright color for focus visibility */
+  outline-offset: 2px;
+}
+
+/* 9. Set basic styles for input fields and buttons */
+input,
+button,
+select,
+textarea {
+  border: 1px solid #ccc; /* Soft border */
+  border-radius: 4px;
+  padding: 0.8rem;
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+/* 10. Button styling for better appearance */
+button {
+  background-color: #004d99;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #003366;
+}
+
+/* 11. Ensure that default styles for form controls are consistent */
+input,
+textarea,
+select {
+  background-color: white;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* 12. Allow anchor elements to maintain link behavior without default decoration */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* 13. Universal box-sizing rule */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Ensure smooth font rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
