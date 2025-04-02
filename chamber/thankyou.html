@@ -3,13 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Thank you for joining the Chamber of Commerce">
-    <meta name="author" content="Mariaa de Lujan Ruiz Diaz Franco">
+    <meta name="description" content="Join the Chamber of Commerce">
+    <meta name="author" content="Maria de Lujan Ruiz Diaz Franco">
     
-    <title>Thank You - Chamber of Commerce </title>
+    <title>Join the Chamber of Commerce</title> 
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Join the Chamber of Commerce">
+    <meta property="og:type" content="website"> 
+    <meta property="og:image" content="images/chamber.jpg">
+    <meta property="og:url" content="https://lujansheridan97.github.io/wdd231/chamber/join.html"> 
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicom.png" type="image/png">
 
-    <link rel="stylesheet" href="styles/thankyou.css">
-    <script src="scripts/thankyou.js" defer></script>
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/join.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,31 +26,48 @@
 </head>
 <body>
     <header>
-        <h1>Thank You for Joining!</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main role="main">
-        <section id="confirmation" aria-live="polite">
-            <h2>Membership Confirmation</h2>
-            <p>Thank you, <span id="user-name"></span>, for submitting your application to join the Chamber of Commerce!</p>
-            <p>Here is the information you submitted:</p>
-            
-            <div class="info-container">
-                <p><strong>First Name:</strong> <span id="first-name"></span></p>
-                <p><strong>Last Name:</strong> <span id="last-name"></span></p>
-                <p><strong>Email:</strong> <span id="email"></span></p>
-                <p><strong>Phone:</strong> <span id="phone"></span></p>
-                <p><strong>Business Name:</strong> <span id="business-name"></span></p>
-                <p><strong>Application Date:</strong> <span id="timestamp"></span></p>
-            </div>
+    <main>
+        <h1>Join the Chamber of Commerce</h1>
 
-            <a href="index.html" class="btn" role="button" tabindex="0">Return to Home</a>
+        <section id="join-form">
+            <h2>Membership Form</h2>
+            <!-- Updated form with action and method -->
+            <form id="membership-form" action="thankyou.html" method="POST">
+                <label for="first-name" aria-label="Enter your first name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+
+                <label for="last-name" aria-label="Enter your last name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+
+                <label for="email" aria-label="Enter your email address">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone" aria-label="Enter your phone number">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="business-name" aria-label="Enter your business name">Business Name:</label>
+                <input type="text" id="business-name" name="business-name" required>
+
+                <button type="submit">Submit</button>
+            </form>
         </section>
     </main>
 
-    <footer aria-label="Site information">
+    <footer>
         <p>&copy; <span id="currentyear"></span> Maria de Lujan Ruiz Diaz Franco - Puerto Rico</p>
-        <p id="lastModified">Last Modified: </p>
     </footer>
+
+    <script>
+        document.getElementById("currentyear").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
