@@ -36,7 +36,7 @@
     </header>
 
     <main>
-        <h1>Join the Chamber of Commerce</h1> <!-- Placed first in the main tag -->
+        <h1>Join the Chamber of Commerce</h1>
 
         <section id="join-form">
             <h2>Membership Form</h2>
@@ -55,6 +55,22 @@
 
                 <label for="business-name" aria-label="Enter your business name">Business Name:</label>
                 <input type="text" id="business-name" name="business-name" required>
+
+                <!-- Missing Labels: Additional Inputs -->
+                <label for="address" aria-label="Enter your address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="city" aria-label="Enter your city">City:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="state" aria-label="Enter your state">State:</label>
+                <input type="text" id="state" name="state" required>
+
+                <label for="zip-code" aria-label="Enter your zip code">Zip Code:</label>
+                <input type="text" id="zip-code" name="zip-code" required>
+
+                <label for="comments" aria-label="Additional comments or questions">Comments:</label>
+                <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter any additional comments or questions here..."></textarea>
 
                 <button type="submit">Submit</button>
             </form>
