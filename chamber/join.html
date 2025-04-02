@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
+    <title>Join the Chamber of Commerce</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Join the Chamber of Commerce and get exclusive benefits.">
     <meta name="author" content="Maria de Lujan Ruiz Diaz Franco">
 
     <!-- Open Graph (Facebook) -->
-     
     <meta property="og:title" content="Join the Chamber of Commerce">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://lujansheridan97.github.io/wdd231/chamber/images/chamber.webp">
@@ -19,24 +19,25 @@
     <meta name="twitter:site" content="@seuTwitter">
     <meta name="twitter:title" content="Join the Syracuse Chamber">
     <meta name="twitter:description" content="Expand your business network and access exclusive chamber benefits.">
-    <meta name="twitter:image" content="https://lujansheridan97.github.io/wdd231/chamber/images/chamber.webp">>
+    <meta name="twitter:image" content="https://lujansheridan97.github.io/wdd231/chamber/images/chamber.webp">
     <meta name="twitter:url" content="https://lujansheridan97.github.io/wdd231/chamber/join.html">
 
-    <title>Join the Chamber of Commerce</title>
-
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/join.css">
 
+    <!-- Scripts -->
     <script src="scripts/hamburger.js" defer></script>
     <script src="scripts/footer.js" defer></script>
     <script src="scripts/modal.js" defer></script>
 
-
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 
-    <link rel="icon" href="favicon.ico" type="chamber/image/favicom.png">
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/png">
     <link rel="apple-touch-icon" href="favicom.png">
   </head>
 
@@ -60,7 +61,6 @@
       <h1>Join the Chamber of Commerce</h1>
     
       <div class="membership-container">
-
         <!-- Membership Form -->
         <section id="membership-form">
           <h2>Membership Application</h2>
@@ -121,101 +121,11 @@
             </label>
             
             <button type="submit">Apply Now</button>
-             <!-- time stamp -->
-        <input type="hidden" id="timestamp" name="timestamp">
+            <input type="hidden" id="timestamp" name="timestamp">
           </form>
         </section>
-        <!-- Membership Benefits Section -->
-        <section id="membership-benefits">
-          <h2>Why Join the Chamber?</h2>
-          <p>Joining the Chamber of Commerce opens doors to exclusive business resources, networking opportunities, advertising options, and community involvement.</p>
-    
-          <div class="membership-levels">
-            <!-- Non-Profit Membership -->
-            <div class="membership-card">
-              <h3>Non-Profit</h3>
-              <p class="price">$0/month</p>
-              <a href="#" onclick="event.preventDefault(); openModal('modal-nonprofit')">See Details</a>
-            </div>
-    
-            <div id="modal-nonprofit" class="modal">
-              <div class="modal-content">
-                  <span class="close" onclick="closeModal('modal-nonprofit')">&times;</span>
-                  <h3>Non-Profit Membership Benefits</h3>
-                  <ul>
-                      <li>✔ Basic directory listing</li>
-                      <li>✔ Community engagement</li>
-                      <li>✔ Networking events</li>
-                  </ul>
-              </div>
-            </div>
-    
-            <!-- Bronze Membership -->
-            <div class="membership-card">
-              <h3>Bronze</h3>
-              <p class="price">$15/month</p>
-              <a href="#" onclick="event.preventDefault(); openModal('modal-bronze')">See Details</a>
-            </div>
-    
-            <div id="modal-bronze" class="modal">
-              <div class="modal-content">
-                  <span class="close" onclick="closeModal('modal-bronze')">&times;</span>
-                  <h3>Bronze Membership Benefits</h3>
-                  <ul>
-                      <li>✔ Basic directory listing</li>
-                      <li>✔ Training access</li>
-                      <li>✔ Business networking</li>
-                  </ul>
-              </div>
-            </div>
-    
-            <!-- Silver Membership -->
-            <div class="membership-card">
-              <h3>Silver</h3>
-              <p class="price">$25/month</p>
-              <a href="#" onclick="event.preventDefault(); openModal('modal-silver')">See Details</a>
-            </div>
-    
-            <div id="modal-silver" class="modal">
-              <div class="modal-content">
-                <span class="close" onclick="closeModal('modal-silver')">&times;</span>
-                <h3>Silver Membership Benefits</h3>
-                <ul>
-                  <li>✔ Directory listing & featured spotlights</li>
-                  <li>✔ Social media promotions</li>
-                  <li>✔ Monthly networking luncheons</li>
-                </ul>
-              </div>
-            </div>
-    
-            <!-- Gold Membership -->
-            <div class="membership-card">
-              <h3>Gold</h3>
-              <p class="price">$50/month</p>
-              <a href="#" onclick="event.preventDefault(); openModal('modal-gold')">See Details</a>
-            </div>
-    
-            <div id="modal-gold" class="modal">
-              <div class="modal-content">
-                <span class="close" onclick="closeModal('modal-gold')">&times;</span>
-                <h3>Gold Membership Benefits</h3>
-                <ul>
-                  <li>✔ All Silver benefits</li>
-                  <li>✔ Business sponsorship opportunities</li>
-                  <li>✔ Exclusive advertising options</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-       
-
-    
-        
       </div>
     </main>
-    
 
     <footer>
       <p>&copy; <span id="currentyear"></span> Maria de Lujan Ruiz Diaz Franco - Puerto Rico </p>
@@ -228,8 +138,5 @@
         document.getElementById("currentyear").textContent = new Date().getFullYear();
       });
     </script>
-    
-    
-
   </body>
 </html>

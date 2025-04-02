@@ -1,48 +1,22 @@
-document.addEventListener("DOMContentLoaded", async () => {
-    const membersData = await fetchMembersData();
-    const spotlightMembers = getSpotlightMembers(membersData);
-    displaySpotlights(spotlightMembers);
+document.addEventListener("DOMContentLoaded", function() {
+    loadSpotlights();
 });
 
-async function fetchMembersData() {
-    const response = await fetch('data/members.json');
+async function loadSpotlights() {
+    const response = await fetch('path_to_your_spotlights_data.json');
     const data = await response.json();
-    return data;
-}
 
-function getSpotlightMembers(members) {
-    // Filter members by Gold and Silver membership levels
-    return members.filter(member => member.membership_level === 'Gold' || member.membership_level === 'Silver');
-}
-
-function displaySpotlights(members) {
     const spotlightContainer = document.getElementById('spotlight-container');
-    spotlightContainer.innerHTML = ''; // Clear previous content
-
-    // Randomly select 2-3 spotlight members
-    const randomSpotlights = getRandomMembers(members, 3);
-
-    randomSpotlights.forEach(member => {
-        const spotlightCard = document.createElement('div');
-        spotlightCard.classList.add('spotlight-card');
-        spotlightCard.innerHTML = `
+    const spotlights = data.filter(member => member.membershipLevel === 'Gold' || member.membershipLevel === 'Silver');
+    
+    spotlights.forEach(member => {
+        const memberDiv = document.createElement('div');
+        memberDiv.classList.add('spotlight');
+        memberDiv.innerHTML = `
             <h3>${member.name}</h3>
-            <img src="${member.logo}" alt="${member.name}">
-            <p>${member.address}</p>
-            <p><a href="${member.website}" target="_blank">Visit Website</a></p>
+            <p>Membership Level: ${member.membershipLevel}</p>
+            <p>${member.description}</p>
         `;
-        spotlightContainer.appendChild(spotlightCard);
+        spotlightContainer.appendChild(memberDiv);
     });
-}
-
-function getRandomMembers(members, count) {
-    const randomMembers = [];
-    while (randomMembers.length < count) {
-        const randomIndex = Math.floor(Math.random() * members.length);
-        const randomMember = members[randomIndex];
-        if (!randomMembers.includes(randomMember)) {
-            randomMembers.push(randomMember);
-        }
-    }
-    return randomMembers;
 }
