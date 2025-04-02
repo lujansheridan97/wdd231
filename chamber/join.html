@@ -6,7 +6,16 @@
     <meta name="description" content="Join the Chamber of Commerce">
     <meta name="author" content="Maria de Lujan Ruiz Diaz Franco">
     
-    <title>Join the Chamber of Commerce</title> <!-- This is the missing title element -->
+    <title>Join the Chamber of Commerce</title> 
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Join the Chamber of Commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="chamber.jpg"> 
+    <meta property="og:url" content="https://lujansheridan97.github.io/wdd231/chamber/join.html"> 
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     
     <link rel="stylesheet" href="styles/join.css">
     <script src="scripts/join.js" defer></script>
@@ -20,10 +29,19 @@
         <h1>Join the Chamber of Commerce</h1>
     </header>
 
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
     <main>
         <section id="join-form">
             <h2>Membership Form</h2>
-            <form id="membership-form">
+            <form id="membership-form" action="thankyou.html" method="POST">
                 <label for="first-name">First Name:</label>
                 <input type="text" id="first-name" name="first-name" required>
 
