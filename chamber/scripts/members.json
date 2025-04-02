@@ -4,7 +4,7 @@
         "address": "123 Main St, City, Country",
         "phone": "(123) 456-7890",
         "website": "http://johndoe.com",
-        "image": "john.jpg",
+        "photo": "john.jpg",
         "membership_level": "Gold",
         "logo": "john-logo.png",
         "email": "contact@johndoe.com"
@@ -14,9 +14,29 @@
         "address": "456 Elm St, City, Country",
         "phone": "(987) 654-3210",
         "website": "http://janesmith.com",
-        "image": "jane.jpg",
+        "photo": "jane.jpg",
         "membership_level": "Silver",
         "logo": "jane-logo.png",
         "email": "contact@janesmith.com"
+    },
+    {
+        "name": "Mike Johnson",
+        "address": "789 Oak St, City, Country",
+        "phone": "(555) 123-4567",
+        "website": "http://mikejohnson.com",
+        "photo": "mike.jpg",
+        "membership_level": "Bronze",
+        "logo": "mike-logo.png",
+        "email": "contact@mikejohnson.com"
+    },
+    {
+        "name": "Anna Lee",
+        "address": "321 Pine St, City, Country",
+        "phone": "(444) 987-6543",
+        "website": "http://annalee.com",
+        "photo": "anna.jpg",
+        "membership_level": "Gold",
+        "logo": "anna-logo.png",
+        "email": "contact@annalee.com"
     }
 ]
