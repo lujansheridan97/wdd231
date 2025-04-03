@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function fetchMembersData() {
     try {
-       // Correct path to member.json
+        // Correct path to member.json
         const response = await fetch('member.json');
 
         if (!response.ok) {
@@ -33,14 +33,20 @@ function displayMembers(members) {
         const memberCard = document.createElement('div');
         memberCard.classList.add('member-card');
 
+        // Check if the member has an image; if not, use a placeholder
+        const image = member.image ? `<img src="images/${member.image}" alt="${member.name}">` : '<img src="images/placeholder.jpg" alt="Placeholder Image">';
+
+        // Handle cases where the member does not have an email
+        const email = member.email ? `<a href="mailto:${member.email}">${member.email}</a>` : 'N/A';
+
         memberCard.innerHTML = `
-            <img src="images/${member.image}" alt="${member.name}">
+            ${image}
             <h3>${member.name}</h3>
             <p><strong>Business:</strong> ${member.name}</p>
             <p><strong>Address:</strong> ${member.address}</p>
             <p><strong>Phone:</strong> ${member.phone}</p>
             <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
-            <p><strong>Email:</strong> <a href="mailto:${member.email}">${member.email}</a></p>
+            <p><strong>Email:</strong> ${email}</p>
             <p><strong>Membership Level:</strong> ${member.membership_level}</p>
             <p>${member.description}</p>
         `;

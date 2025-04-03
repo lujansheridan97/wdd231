@@ -3,6 +3,7 @@ body {
     background-color: #f8f8f8;
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Prevent overflow issues */
 }
 
 /* Header */
@@ -45,7 +46,6 @@ nav ul {
     list-style: none;
 }
 
-/* Menu Links */
 nav ul li a {
     font-size: 20px;
     color: white;
@@ -156,6 +156,7 @@ nav ul li a.active {
     background-color: #f8f8f8;
     padding: 20px;
     border-radius: 10px;
+    justify-items: center; /* Ensure center alignment */
 }
 
 .member-card {
@@ -197,10 +198,11 @@ footer {
 
 /* Mobile Responsiveness */
 @media (max-width: 600px) {
+    /* Hide menu links by default */
     nav ul {
         flex-direction: column;
         gap: 10px;
-        display: none; /* Initially hide the menu */
+        display: none;
     }
 
     /* Show the navigation menu when active */
@@ -208,7 +210,7 @@ footer {
         display: flex;
     }
 
-    /* Show the menu button on mobile */
+    /* Display the hamburger button on mobile */
     nav button {
         display: block;
         background: #013a63;
@@ -217,12 +219,15 @@ footer {
         border: none;
         font-size: 20px;
         cursor: pointer;
+        border-radius: 5px;
     }
 
+    /* Style for view toggle buttons on mobile */
     #viewToggle button {
         font-size: 14px;
     }
 
+    /* Adjust directory grid for mobile */
     #membersDirectory {
         grid-template-columns: 1fr;
     }
