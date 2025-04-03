@@ -35,15 +35,17 @@ nav {
 }
 
 nav button {
-    display: none;
+    display: none; /* Hidden by default, will show on smaller screens */
 }
 
+/* Menu on large screens */
 nav ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
 }
 
+/* Menu Links */
 nav ul li a {
     font-size: 20px;
     color: white;
@@ -198,6 +200,23 @@ footer {
     nav ul {
         flex-direction: column;
         gap: 10px;
+        display: none; /* Initially hide the menu */
+    }
+
+    /* Show the navigation menu when active */
+    nav ul.active {
+        display: flex;
+    }
+
+    /* Show the menu button on mobile */
+    nav button {
+        display: block;
+        background: #013a63;
+        color: white;
+        padding: 10px;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
     }
 
     #viewToggle button {

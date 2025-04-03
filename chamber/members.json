@@ -1,0 +1,67 @@
+{
+    "members": [
+      {
+        "name": "Syracuse Family Dental",
+        "address": "801 S 2000 W, Syracuse, UT 84075",
+        "phone": "(801) 776-2461",
+        "website": "https://syracusefamilydentist.com/",
+        "image": "family_dental.webp",
+        "membership_level": 3,
+        "description": "Providing family-friendly dental care with a focus on patient comfort."
+      },
+      {
+        "name": "Beans & Brews Coffeehouse",
+        "address": "2052 W 1700 S, Syracuse, UT 84075",
+        "phone": "(801) 776-3900",
+        "website": "https://beansandbrews.com/",
+        "image": "beans_brews.webp",
+        "membership_level": 2,
+        "description": "Locally roasted coffee and specialty drinks with a relaxing atmosphere."
+      },
+      {
+        "name": "Texas Roadhouse",
+        "address": "712 S 2000 W, Syracuse, UT 84075",
+        "phone": "(801) 776-8500",
+        "website": "https://www.texasroadhouse.com/",
+        "image": "texas_roadhouse.webp",
+        "membership_level": 3,
+        "description": "A legendary steakhouse serving hand-cut steaks, fall-off-the-bone ribs, and fresh bread."
+      },
+      {
+        "name": "Lee’s Marketplace",
+        "address": "2058 W 1700 S, Syracuse, UT 84075",
+        "phone": "(801) 773-8700",
+        "website": "https://leesmarketplace.com/",
+        "image": "lees_marketplace.webp",
+        "membership_level": 1,
+        "description": "A full-service grocery store providing fresh produce, bakery items, and quality meats."
+      },
+      {
+        "name": "Great Clips",
+        "address": "2068 W 1700 S Suite 102, Syracuse, UT 84075",
+        "phone": "(801) 776-9000",
+        "website": "https://www.greatclips.com/",
+        "image": "great_clips.webp",
+        "membership_level": 1,
+        "description": "A family-friendly hair salon offering quality haircuts at an affordable price."
+      },
+      {
+        "name": "Cold Stone Creamery",
+        "address": "2098 W 1700 S Suite C, Syracuse, UT 84075",
+        "phone": "(801) 773-3114",
+        "website": "https://www.coldstonecreamery.com/",
+        "image": "coldstone.webp",
+        "membership_level": 2,
+        "description": "Premium ice cream mixed with your favorite toppings on a frozen granite stone."
+      },
+      {
+        "name": "Syracuse City Recreation",
+        "address": "1912 W 1900 S, Syracuse, UT 84075",
+        "phone": "(801) 614-9655",
+        "website": "https://syracuseut.gov/Recreation",
+        "image": "syracuse_recreation.webp",
+        "membership_level": 3,
+        "description": "Providing sports leagues, community events, and recreational activities for all ages."
+      }
+    ]
+  }

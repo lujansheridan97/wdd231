@@ -28,15 +28,17 @@
 
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
 </head>
 <body>
     <header>
         <button id="menuButton" aria-label="Open menu">☰ Menu</button>
         <nav id="navMenu">
             <ul>
-                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="chamber.html">Chamber</a></li>
-                <li><a href="https://github.com/lujansheridan97" target="_blank">GitHub Profile</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="https://github.com/lujansheridan97" target="_blank">GitHub</a></li>
                 <li><a href="https://www.linkedin.com/in/lujan-ruiz-diaz-f/" target="_blank">LinkedIn</a></li>
             </ul>
         </nav>
@@ -45,11 +47,24 @@
     <main>
         <h1>Chamber of Commerce Directory</h1>
 
+        <section id="weather">
+            <h2>Current Weather</h2>
+            <p id="weather-info">Loading weather...</p> <!-- This remains as is -->
+            <div id="current-weather"></div> <!-- Add this div for current weather -->
+            <div id="weather-forecast"></div> <!-- Add this div for weather forecast -->
+        </section>
+
         <!-- View toggle buttons -->
         <div id="viewToggle">
             <button id="gridView">Grid View</button>
             <button id="listView">List View</button>
         </div>
+
+        <!-- Spotlight Members -->
+        <section id="spotlight-container">
+            <h2>Spotlight Members</h2>
+            <div id="spotlights"></div>
+        </section>
 
         <!-- Directory content: Members List -->
         <section id="membersDirectory">
@@ -66,6 +81,45 @@
     <script>
         document.getElementById("currentyear").textContent = new Date().getFullYear();
         document.getElementById("lastModified").textContent = document.lastModified;
+
+        // Fetch member data from 'data/member.json' and display them
+        async function fetchMembersData() {
+            try {
+                const response = await fetch('data/member.json'); // Updated path to member.json
+                const members = await response.json();
+                displayMembers(members);
+            } catch (error) {
+                console.error('Error loading members:', error);
+            }
+        }
+
+        function displayMembers(members) {
+            const membersDirectory = document.getElementById("membersDirectory");
+            membersDirectory.innerHTML = ''; // Clear any existing content
+
+            members.forEach(member => {
+                const memberCard = document.createElement('div');
+                memberCard.classList.add('member-card');
+
+                memberCard.innerHTML = `
+                    <img src="images/${member.image}" alt="${member.name}">
+                    <h3>${member.name}</h3>
+                    <p><strong>Business:</strong> ${member.business_name}</p>
+                    <p><strong>Address:</strong> ${member.address}</p>
+                    <p><strong>Phone:</strong> ${member.phone}</p>
+                    <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
+                    <p><strong>Email:</strong> <a href="mailto:${member.email}">${member.email}</a></p>
+                    <p><strong>Membership Level:</strong> ${member.membership_level}</p>
+                    <img src="images/${member.logo}" alt="${member.business_name} Logo">
+                    <p>${member.description}</p>
+                `;
+
+                membersDirectory.appendChild(memberCard);
+            });
+        }
+
+        // Call fetch function when the page loads
+        window.onload = fetchMembersData;
     </script>
 
     <script src="scripts/directory.js" defer></script>

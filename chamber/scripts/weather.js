@@ -15,7 +15,8 @@ async function getWeatherData() {
 
         const data = await response.json();
 
-        document.getElementById('current-weather').innerHTML = `
+        // Use 'weather-info' instead of 'current-weather'
+        document.getElementById('weather-info').innerHTML = `  <!-- Update this ID to match the existing HTML -->
             <p>Current Temperature: ${data.main.temp}°C</p>
             <p>${data.weather[0].description}</p>
         `;
@@ -23,7 +24,7 @@ async function getWeatherData() {
         getWeatherForecast(city, weatherAPIKey); // Get the 3-day forecast
     } catch (error) {
         console.error(error);
-        document.getElementById('current-weather').innerHTML = `<p>Sorry, we couldn't fetch the weather data. Please try again later.</p>`;
+        document.getElementById('weather-info').innerHTML = `<p>Sorry, we couldn't fetch the weather data. Please try again later.</p>`;
     }
 }
 
@@ -40,16 +41,18 @@ async function getWeatherForecast(city, weatherAPIKey) {
         let forecastHTML = `<h3>3-Day Forecast:</h3><ul>`;
         for (let i = 0; i < 3; i++) {
             const day = forecastData.list[i * 8];  // Each forecast is 3 hours apart, so 8 entries per day
-            forecastHTML += `
+            forecastHTML += ` 
                 <li>
                     <p><strong>${new Date(day.dt * 1000).toLocaleDateString()}:</strong> 
                     ${day.main.temp}°C, ${day.weather[0].description}</p>
                 </li>`;
         }
         forecastHTML += `</ul>`;
-        document.getElementById('weather-forecast').innerHTML = forecastHTML;
+        
+        // If you want to display the forecast in 'weather-info', use it here as well.
+        document.getElementById('weather-info').innerHTML += forecastHTML;
     } catch (error) {
         console.error(error);
-        document.getElementById('weather-forecast').innerHTML = `<p>Sorry, we couldn't fetch the weather forecast. Please try again later.</p>`;
+        document.getElementById('weather-info').innerHTML += `<p>Sorry, we couldn't fetch the weather forecast. Please try again later.</p>`;
     }
 }
