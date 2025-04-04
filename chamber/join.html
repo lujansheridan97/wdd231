@@ -6,7 +6,7 @@
     <meta name="description" content="Join the Chamber of Commerce">
     <meta name="author" content="Maria de Lujan Ruiz Diaz Franco">
     
-    <title>Join the Chamber of Commerce</title> 
+    <title>Join the Chamber of Commerce</title>
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Join the Chamber of Commerce">
@@ -29,8 +29,9 @@
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
             </ul>
         </nav>
     </header>
@@ -38,39 +39,144 @@
     <main>
         <h1>Join the Chamber of Commerce</h1>
 
+        <section id="membership-cards">
+            <h2>Choose Your Membership Level</h2>
+            <div class="membership-levels">
+                <!-- Basic Membership Card -->
+                <div class="membership-card">
+                    <h3>Basic Membership</h3>
+                    <p>Starting at $50/year</p>
+                    <button class="btn" onclick="openModal('basicModal')">View Benefits</button>
+                </div>
+
+                <!-- Premium Membership Card -->
+                <div class="membership-card">
+                    <h3>Premium Membership</h3>
+                    <p>Starting at $100/year</p>
+                    <button class="btn" onclick="openModal('premiumModal')">View Benefits</button>
+                </div>
+
+                <!-- Gold Membership Card -->
+                <div class="membership-card">
+                    <h3>Gold Membership</h3>
+                    <p>Starting at $200/year</p>
+                    <button class="btn" onclick="openModal('goldModal')">View Benefits</button>
+                </div>
+
+                <!-- Platinum Membership Card -->
+                <div class="membership-card">
+                    <h3>Platinum Membership</h3>
+                    <p>Starting at $500/year</p>
+                    <button class="btn" onclick="openModal('platinumModal')">View Benefits</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modals for Membership Levels -->
+        <!-- Basic Membership Modal -->
+        <div id="basicModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('basicModal')">&times;</span>
+                <h4>Basic Membership Benefits</h4>
+                <ul>
+                    <li>Access to the business directory</li>
+                    <li>Discounts on events</li>
+                    <li>Monthly newsletter</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Premium Membership Modal -->
+        <div id="premiumModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('premiumModal')">&times;</span>
+                <h4>Premium Membership Benefits</h4>
+                <ul>
+                    <li>All Basic Membership benefits</li>
+                    <li>Exclusive networking events</li>
+                    <li>Priority event registration</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Gold Membership Modal -->
+        <div id="goldModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('goldModal')">&times;</span>
+                <h4>Gold Membership Benefits</h4>
+                <ul>
+                    <li>All Premium Membership benefits</li>
+                    <li>Special recognition at events</li>
+                    <li>Featured listing in the directory</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Platinum Membership Modal -->
+        <div id="platinumModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('platinumModal')">&times;</span>
+                <h4>Platinum Membership Benefits</h4>
+                <ul>
+                    <li>All Gold Membership benefits</li>
+                    <li>Personalized business support</li>
+                    <li>Exclusive access to VIP events</li>
+                </ul>
+            </div>
+        </div>
+
         <section id="join-form">
             <h2>Membership Form</h2>
             <form id="membership-form" action="thankyou.html" method="POST">
-                <label for="first-name" aria-label="Enter your first name">First Name:</label>
-                <input type="text" id="first-name" name="first-name" required>
+                <div class="form-group">
+                    <label for="first-name" aria-label="Enter your first name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" required>
+                </div>
 
-                <label for="last-name" aria-label="Enter your last name">Last Name:</label>
-                <input type="text" id="last-name" name="last-name" required>
+                <div class="form-group">
+                    <label for="last-name" aria-label="Enter your last name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" required>
+                </div>
 
-                <label for="email" aria-label="Enter your email address">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <div class="form-group">
+                    <label for="email" aria-label="Enter your email address">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-                <label for="phone" aria-label="Enter your phone number">Phone:</label>
-                <input type="tel" id="phone" name="phone" required>
+                <div class="form-group">
+                    <label for="phone" aria-label="Enter your phone number">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
 
-                <label for="business-name" aria-label="Enter your business name">Business Name:</label>
-                <input type="text" id="business-name" name="business-name" required>
+                <div class="form-group">
+                    <label for="business-name" aria-label="Enter your business name">Business Name:</label>
+                    <input type="text" id="business-name" name="business-name" required>
+                </div>
 
-                <!-- Missing Labels: Additional Inputs -->
-                <label for="address" aria-label="Enter your address">Address:</label>
-                <input type="text" id="address" name="address" required>
+                <div class="form-group">
+                    <label for="address" aria-label="Enter your address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
 
-                <label for="city" aria-label="Enter your city">City:</label>
-                <input type="text" id="city" name="city" required>
+                <div class="form-group">
+                    <label for="city" aria-label="Enter your city">City:</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
 
-                <label for="state" aria-label="Enter your state">State:</label>
-                <input type="text" id="state" name="state" required>
+                <div class="form-group">
+                    <label for="state" aria-label="Enter your state">State:</label>
+                    <input type="text" id="state" name="state" required>
+                </div>
 
-                <label for="zip-code" aria-label="Enter your zip code">Zip Code:</label>
-                <input type="text" id="zip-code" name="zip-code" required>
+                <div class="form-group">
+                    <label for="zip-code" aria-label="Enter your zip code">Zip Code:</label>
+                    <input type="text" id="zip-code" name="zip-code" required>
+                </div>
 
-                <label for="comments" aria-label="Additional comments or questions">Comments:</label>
-                <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter any additional comments or questions here..."></textarea>
+                <div class="form-group">
+                    <label for="comments" aria-label="Additional comments or questions">Comments:</label>
+                    <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Enter any additional comments or questions here..."></textarea>
+                </div>
 
                 <button type="submit">Submit</button>
             </form>
@@ -83,6 +189,16 @@
 
     <script>
         document.getElementById("currentyear").textContent = new Date().getFullYear();
+
+        // Open Modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        // Close Modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
     </script>
 </body>
 </html>
