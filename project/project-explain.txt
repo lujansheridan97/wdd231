@@ -1,0 +1,35 @@
+Subject of the Website: Argentinian Mate & Products Online Store
+
+Planned Content of the Website: This website will be an e-commerce platform dedicated to selling yerba mate and other traditional Argentinian products. It will feature a variety of yerba mate brands, mate gourds, bombillas, and other related accessories. Additionally, the store will offer Argentinian food products such as dulce de leche, alfajores, and other specialties. Customers will be able to browse categories, read product descriptions, and make secure purchases online.
+
+Reason for Choosing This Subject: I am originally from Argentina and have been living abroad for over five years. Finding Argentinian products outside of Argentina is often difficult and expensive. Because of this, I am considering opening an online store in the future to provide easy access to authentic Argentinian goods within the USA. This website will serve as the foundation for that venture, helping fellow Argentinians and enthusiasts of Argentinian culture find the products they love.
+
+Color Schema: The website will feature colors inspired by the Argentinian flag:
+•	Sky Blue (#75AADB): Used for headers, buttons, and accents.
+•	White (#FFFFFF): Used for the background and text contrast.
+•	Golden Yellow (#F7C242): Used for highlights and call-to-action elements, representing the sun from the Argentinian flag.
+
+Site Name: Argentinian Mate & Products Online Store
+•	Reason for the Site Name: This name clearly represents the online store’s focus on Argentinian traditional products, especially yerba mate and its accessories.
+•	Optional Domain Availability: mate-products.com (as an example).
+
+Site Purpose: The website is an e-commerce platform designed to sell authentic Argentinian products, focusing on yerba mate, traditional accessories like mate gourds and bombillas, and other cultural foods such as dulce de leche and alfajores. The goal is to provide a convenient shopping experience for Argentinian expats and enthusiasts in the USA.
+Scenarios:
+1.	Scenario 1: "Where can I buy yerba mate and traditional Argentinian products online in the USA?"
+o	The website will provide an easy-to-navigate shop with product categories and descriptions.
+2.	Scenario 2: "What is yerba mate and how do I use it?"
+o	A dedicated section will educate customers about yerba mate, its history, health benefits, and proper preparation methods.
+
+Typography:
+•	Roboto: Used for body text due to its readability.
+•	Lora: Used for headers and call-to-action elements to give a traditional yet modern feel.
+
+Wireframe:
+•	Mobile View: Stacked layout with a collapsible menu, large buttons, and easy navigation.
+•	Desktop View: Horizontal navigation, featured product sections, and a well-structured grid layout for products.
+
+
+CSS Considerations:
+•	Sky Blue (#75AADB): Used for navigation, buttons, and section headings.
+•	White (#FFFFFF): Main background color for readability.
+•	Golden Yellow (#F7C242): Used for call-to-action buttons and highlights.
