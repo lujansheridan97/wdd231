@@ -15,88 +15,90 @@ body {
     text-align: center;
   }
   
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-  }
-  
   .logo h1 {
     margin: 0;
     font-size: 24px;
   }
   
+  /* Top Navigation (Desktop) */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #75AADB;
+    padding: 10px 20px;
+  }
+  
+  .menu {
+    display: flex;
+    gap: 20px;
+  }
+  
   .menu a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
     font-size: 18px;
+  }
+  
+  /* Hamburger Menu (Mobile) */
+  .hamburger {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
   }
   
   /* Hero Section */
   .hero {
     text-align: center;
-    padding: 100px 20px;
-    background-image: url('../images/argentina.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: white;
-    height: 400px;
+    padding: 60px 20px;
+    background-color: #e0ecf6;
   }
   
   .hero h2 {
-    font-size: 36px;
+    font-size: 28px;
     font-weight: bold;
+    margin-bottom: 20px;
   }
   
   .btn {
-    background-color: #75AADB;
+    background-color: #4285f4;
     color: white;
     border: none;
     padding: 12px 24px;
     font-size: 18px;
+    border-radius: 5px;
     cursor: pointer;
-    margin-top: 20px;
     transition: background 0.3s ease;
   }
   
   .btn:hover {
-    background-color: #5b8dbf;
+    background-color: #3367d6;
   }
   
-  /* Product Section */
-  .products {
+  /* Section Titles */
+  .section-title {
+    font-size: 24px;
+    margin: 40px 0 20px;
     text-align: center;
-    padding: 60px 20px;
-    background-color: #f8f8f8;
+    font-weight: bold;
   }
   
+  /* Product Grid */
   .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
     max-width: 1200px;
     margin: 0 auto;
   }
   
   .product {
-    border: 1px solid #ddd;
-    padding: 20px;
     background-color: white;
+    border: 1px solid #ccc;
     border-radius: 8px;
-    transition: transform 0.3s ease;
-  }
-  
-  .product:hover {
-    transform: scale(1.05);
-  }
-  
-  .product img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+    padding: 16px;
+    text-align: center;
   }
   
   /* Footer */
@@ -105,14 +107,34 @@ body {
     background-color: #75AADB;
     color: white;
     padding: 20px;
-    margin-top: 20px;
+    margin-top: 40px;
   }
   
   /* Responsive Design */
   @media (max-width: 768px) {
     nav {
       flex-direction: column;
-      text-align: center;
+      align-items: flex-start;
+    }
+  
+    .menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    .menu.active {
+      display: flex;
+    }
+  
+    .hamburger {
+      display: block;
+      color: white;
+    }
+  
+    .hero {
+      padding: 40px 20px;
     }
   
     .product-grid {

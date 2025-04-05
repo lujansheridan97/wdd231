@@ -9,7 +9,10 @@
 <body>
   <header>
     <nav>
-      <div class="logo"><h1>Argentinian Mate & Products</h1></div>
+      <div class="logo">
+        <h1>Argentinian Mate & Products</h1>
+      </div>
+      <div class="hamburger">&#9776;</div>
       <div class="menu">
         <a href="#shop">Shop</a>
         <a href="#about">About</a>
@@ -18,29 +21,34 @@
     </nav>
   </header>
 
-  <!-- Hero Section with Background Image -->
+  <!-- Hero Section -->
   <section class="hero">
     <h2>Discover the Authentic Taste of Argentina</h2>
     <button class="btn">Shop Now</button>
   </section>
 
-  <section class="site-info">
-    <h2>Site Information</h2>
-    <h3>Site Name</h3>
-    <p>Argentinian Mate & Products Online Store - This name reflects the purpose of the website, which is to provide authentic Argentinian products, especially yerba mate, to customers in the USA.</p>
-    
-    <h3>Site Purpose</h3>
-    <p>The purpose of this site is to offer a variety of authentic Argentinian products, including yerba mate, mate gourds, bombillas, and other traditional food items. Customers can browse products, learn about Argentinian culture, and make secure online purchases.</p>
-    
-    <h3>Scenarios</h3>
-    <ul>
-      <li>Where can I buy authentic Argentinian yerba mate in the USA?</li>
-      <li>What are the different types of mate gourds and which one should I choose?</li>
-    </ul>
+  <!-- Product Categories -->
+  <section class="products">
+    <h2 class="section-title">Product Categories</h2>
+    <div class="product-grid">
+      <div class="product">
+        <img src="images/yerba.jpg" alt="Yerba Mate">
+        <h3>Yerba Mate</h3>
+      </div>
+      <div class="product">
+        <img src="images/mate.jpg" alt="Gourd Sets">
+        <h3>Gourd Sets</h3>
+      </div>
+      <div class="product">
+        <img src="images/bombilla.jpg" alt="Bombillas">
+        <h3>Bombillas</h3>
+      </div>
+    </div>
   </section>
 
+  <!-- Featured Products -->
   <section class="products">
-    <h2>Featured Products</h2>
+    <h2 class="section-title">Featured Products</h2>
     <div class="product-grid">
       <div class="product">
         <img src="images/yerba.jpg" alt="Yerba Mate">
@@ -63,8 +71,18 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Argentinian Mate & Products</p>
   </footer>
+
+  <!-- JavaScript for Mobile Menu -->
+  <script>
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu');
+    hamburger.addEventListener('click', () => {
+      menu.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
