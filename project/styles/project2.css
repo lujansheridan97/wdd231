@@ -141,4 +141,10 @@ body {
       grid-template-columns: 1fr;
     }
   }
+  .product img {
+    width: 100%; /* Ensures the image fills its container */
+    height: auto; /* Maintains the aspect ratio */
+    max-height: 200px; /* Sets a maximum height for uniformity */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+  }
   
