@@ -21,8 +21,7 @@ o	The website will provide an easy-to-navigate shop with product categories and 
 o	A dedicated section will educate customers about yerba mate, its history, health benefits, and proper preparation methods.
 
 Typography:
-•	Roboto: Used for body text due to its readability.
-•	Lora: Used for headers and call-to-action elements to give a traditional yet modern feel.
+•	Arial, sans-serif and applying it site-wide.
 
 Wireframe:
 •	Mobile View: Stacked layout with a collapsible menu, large buttons, and easy navigation.
@@ -33,3 +32,6 @@ CSS Considerations:
 •	Sky Blue (#75AADB): Used for navigation, buttons, and section headings.
 •	White (#FFFFFF): Main background color for readability.
 •	Golden Yellow (#F7C242): Used for call-to-action buttons and highlights.
+
+Color Schema:  a consistent palette (#75AADB blue, white, and light gray), as shown in the CSS.
+
