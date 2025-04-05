@@ -1,0 +1,21 @@
+@media (min-width: 500px) and (max-width: 1024px) {
+    main.discover section.card {
+      grid-template-columns: repeat(2, 1fr); /* cleaner syntax */
+    }
+  
+    main.discover section.card article {
+      padding: 20px; /* increased spacing */
+    }
+  
+    main.discover section.card article img {
+      max-width: 100%; /* fully responsive image */
+      height: auto;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    main.discover section.card {
+      grid-template-columns: repeat(3, 1fr); /* extra layout for larger screens */
+    }
+  }
+  

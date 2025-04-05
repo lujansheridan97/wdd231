@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the Chamber of Commerce Directory.">
+  <meta name="author" content="Maria de Lujan Ruiz Diaz Franco">
+
+  <link rel="stylesheet" href="styles/discover.css" />
+  <script defer src="scripts/discover.js"></script>
+
+  <title>Discover | Chamber of Commerce</title>
+  <script src="scripts/hamburger.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
+  <script src="scripts/weather.js" defer></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header>
+    <nav>
+      <button id="menuBtn"></button>
+      <ul id="navMenu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="discover.html" class="active">Discover</a></li>
+        <li><a href="directory.html">Directory</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+    <h1>Local Discoveries</h1>
+  </header>
+
+  <main>
+    <!-- Static Content -->
+    <section id="history">
+      <h2>History of Puerto Rico</h2>
+      <p>
+        Puerto Rico, a Caribbean island, was first inhabited by the Taíno people before being colonized by Spain in 1493...
+      </p>
+      <img src="images/heritage.webp" alt="Historic Puerto Rico" loading="lazy" />
+    </section>
+
+    <section id="puerto-rico-info">
+      <h2>Puerto Rico Info</h2>
+      <ul>
+        <li><strong>Population:</strong> ~3.3 million residents</li>
+        <li><strong>Household Income:</strong> ~$21,000</li>
+        <li><strong>Median resident age:</strong> 43.3 years</li>
+        <li><strong>Median House Value:</strong> ~$120,000</li>
+      </ul>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section id="events">
+      <h2>Upcoming Events in Puerto Rico</h2>
+      <ul>
+        <li><strong>Fiesta de la Calle San Sebastián</strong> - January 15th-19th in Old San Juan</li>
+        <li><strong>La Campechada</strong> - October 18th-20th, celebrating Puerto Rican culture</li>
+        <li><strong>Puerto Rico Heineken Jazzfest</strong> - March 6th-9th in San Juan</li>
+      </ul>
+      <a href="https://www.discoverpuertorico.com/events" target="_blank">See More</a>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="grid-container" id="cards-container">
+      <!-- Cards will be dynamically injected here -->
+    </section>
+
+    <!-- Map -->
+    <section id="map">
+      <h2>Puerto Rico</h2>
+      <iframe src="https://www.google.com/maps/embed?pb=..." loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <!-- Weather -->
+    <section id="weather-container">
+      <h2>Puerto Rico Weather</h2>
+      <div class="weather-content">
+        <div id="current-weather">
+          <p><strong>Current Temperature:</strong> 81°F (27°C)</p>
+          <p><strong>Condition:</strong> Mostly Sunny</p>
+          <p><strong>Humidity:</strong> 75%</p>
+          <p><strong>Wind:</strong> 14 mph (23 km/h)</p>
+        </div>
+        <div id="weather-forecast">
+          <h3>Forecast for the Next 5 Days:</h3>
+          <ul>
+            <li>Day 1: 82°F (28°C) - Scattered Showers</li>
+            <li>Day 2: 80°F (27°C) - Partly Cloudy</li>
+            <li>Day 3: 83°F (28°C) - Thunderstorms</li>
+            <li>Day 4: 81°F (27°C) - Sunny</li>
+            <li>Day 5: 79°F (26°C) - Showers</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Message for Last Visit -->
+    <section class="visit-message" id="visitMessage"></section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Chamber of Commerce. Maria de Lujan Ruiz Diaz Franco.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Fetch data from JSON and inject it into the cards section
+    fetch('data/discovery.json')
+      .then(response => response.json())
+      .then(data => {
+        const cardsContainer = document.getElementById('cards-container');
+        data.forEach(item => {
+          const card = document.createElement('article');
+          card.classList.add('card');
+          
+          card.innerHTML = `
+            <h3>${item.name}</h3>
+            <img src="${item.image}" alt="${item.name}" loading="lazy" />
+            <p><strong>Address:</strong> ${item.address}</p>
+            <p>${item.description}</p>
+            <a href="https://maps.app.goo.gl" target="_blank">Learn More</a>
+          `;
+          
+          cardsContainer.appendChild(card);
+        });
+      })
+      .catch(error => console.log('Error fetching JSON data:', error));
+  </script>
+</body>
+</html>
