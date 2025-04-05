@@ -1,0 +1,51 @@
+[
+    {
+      "name": "Artisan Market",
+      "address": "123 Market St",
+      "description": "A hub for local handcrafted goods and food.",
+      "image": "images/market.webp" 
+    },  
+    {
+      "name": "History Museum",
+      "address": "456 Heritage Rd",
+      "description": "Explore our town's roots and rich culture.",
+      "image": "images/museum.webp"
+    },
+    {
+      "name": "Botanical Garden",
+      "address": "789 Bloom Ave",
+      "description": "A beautiful park full of native plants and flowers.",
+      "image": "images/garden.webp"
+    },
+    {
+      "name": "Riverside Walk",
+      "address": "101 Riverbank Dr",
+      "description": "A peaceful walking trail along the river with scenic views.",
+      "image": "images/riverwalk.webp"
+    },
+    {
+      "name": "Community Library",
+      "address": "202 Book Ln",
+      "description": "More than just books—offers events, art, and tech resources.",
+      "image": "images/library.webp"
+    },
+    {
+      "name": "Heritage Square",
+      "address": "303 Main Plaza",
+      "description": "A historic plaza surrounded by local eateries and shops.",
+      "image": "images/heritage.webp" 
+    },
+    {
+      "name": "Sunset Pier",
+      "address": "404 Ocean View Blvd",
+      "description": "Popular spot to watch sunsets and enjoy fresh seafood.",
+      "image": "images/pier.webp"
+    },
+    {
+      "name": "Civic Theater",
+      "address": "505 Broadway Ave",
+      "description": "Home to community plays, concerts, and cultural events.",
+      "image": "images/civic.webp"  
+    }
+  ]
+  
