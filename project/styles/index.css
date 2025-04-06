@@ -1,0 +1,147 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #FFFFFF;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3 {
+    font-family: 'Lora', serif;
+  }
+  
+  /* Header */
+  header {
+    background-color: #75AADB;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+  
+  .logo h1 {
+    margin: 0;
+    font-size: 24px;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+  }
+  
+  .menu a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Hero Section */
+  .hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-image: url('../images/argentina.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+  }
+  
+  .hero h2 {
+    font-size: 36px;
+  }
+  
+  .btn {
+    background-color: #F7C242;
+    color: #333;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .btn:hover {
+    background-color: #e6b834;
+  }
+  
+  /* Site Plan Section */
+  .site-plan {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .site-plan h2, .site-plan h3 {
+    color: #75AADB;
+  }
+  
+  .site-plan ul {
+    padding-left: 20px;
+  }
+  
+  /* Wireframes */
+  .wireframes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .wireframes img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    max-height: 500px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background-color: #75AADB;
+    color: white;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .menu {
+      margin-top: 10px;
+    }
+  
+    .hero h2 {
+      font-size: 28px;
+    }
+  
+    .btn {
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+  
+    .site-plan {
+      padding: 20px 10px;
+    }
+  
+    .wireframes img {
+      max-height: 300px;
+    }
+  }
+  
