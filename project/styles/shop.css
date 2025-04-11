@@ -130,3 +130,40 @@ footer {
         padding: 10px 20px;
     }
 }
+
+
+/* Hamburger Button */
+.hamburger {
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+    display: none;
+  }
+  
+  /* Hide Menu by Default on Mobile */
+  @media (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+    nav {
+      width: 100%;
+    }
+  
+    #nav-menu {
+      display: none;
+      width: 100%;
+    }
+  
+    #nav-menu.active {
+      display: block;
+      text-align: center;
+      margin-top: 1rem;
+    }
+  
+    .menu {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  
