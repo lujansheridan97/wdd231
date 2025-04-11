@@ -9,37 +9,148 @@
 <body>
     <header>
         <div class="logo">
-            <h1>Argentinian Mate</h1>
+          <h1>Argentinian Mate & Products</h1>
         </div>
-        <nav>
-            <div class="menu">
-                <a href="index.html">Home</a>
-                <a href="shop.html">Shop</a>
-                <a href="contact.html">Contact</a>
-            </div>
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <nav id="nav-menu">
+          <div class="menu">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="contact.html">Contact</a>
+          </div>
         </nav>
     </header>
 
     <section class="shop-hero">
         <h2>Discover Authentic Argentinian Products</h2>
         <p>High-quality yerba mate, gourds, and more!</p>
+        <button class="btn">Shop Now</button>
     </section>
 
-    <section class="product-grid">
-        <div class="product">
-            <img src="path_to_image.jpg" alt="Yerba Mate">
-            <h3>Yerba Mate</h3>
-            <p>$10.99</p>
-            <button class="btn">Add to Cart</button>
+    <section class="product-categories">
+        <h2>Product Categories</h2>
+        <div class="category-grid">
+            <div class="category">
+                <img src="images/yerba.jpg" alt="Yerba Mate">
+                <p>Yerba Mate</p>
+            </div>
+            <div class="category">
+                <img src="images/mate.jpg" alt="Gourd Sets">
+                <p>Gourd Sets</p>
+            </div>
+            <div class="category">
+                <img src="images/bombilla.jpg" alt="Bombillas">
+                <p>Bombillas</p>
+            </div>
         </div>
-        <div class="product">
-            <img src="path_to_image.jpg" alt="Mate Gourd">
-            <h3>Mate Gourd</h3>
-            <p>$15.99</p>
-            <button class="btn">Add to Cart</button>
-        </div>
-        <!-- Add more products here -->
     </section>
+
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="images/yerba.jpg" alt="Yerba Mate" loading="lazy">
+                <h3>Yerba Mate</h3>
+                <p>$10.99</p>
+                <button class="btn" onclick="addToCart('Yerba Mate', 10.99, 'Traditional yerba mate')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/mate.jpg" alt="Mate Gourd" loading="lazy">
+                <h3>Mate Gourd</h3>
+                <p>$15.99</p>
+                <button class="btn" onclick="addToCart('Mate Gourd', 15.99, 'Ceramic gourd for mate')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/bizcochitos.webp" alt="Bizcochos agridulce" loading="lazy">
+                <h3>Bizcochos agridulce</h3>
+                <p>$3.99</p>
+                <button class="btn" onclick="addToCart('Bizcochos agridulce', 3.99, 'Sweet and salty biscuits')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/guaymallen.webp" alt="Alfajores" loading="lazy">
+                <h3>Alfajores</h3>
+                <p>$1.99</p>
+                <button class="btn" onclick="addToCart('Alfajores', 1.99, 'Dulce de leche filled cookies')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/tofi.webp" alt="Alfajores" loading="lazy">
+                <h3>Alfajores</h3>
+                <p>$1.99</p>
+                <button class="btn" onclick="addToCart('Alfajores', 1.99, 'Dulce de leche filled cookies')">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="images/bombilla.jpg" alt="Bombilla" loading="lazy">
+                <h3>Bombilla</h3>
+                <p>$2.99</p>
+                <button class="btn" onclick="addToCart('Bombilla', 2.99, 'Metal straw for mate')">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart">
+        <h2>Your Cart:</h2>
+        <ul id="cart-list"></ul>
+        <p id="total-price"></p>
+        <button onclick="clearCart()">Clear Cart</button>
+    </section>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.querySelector('nav .menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        function addToCart(name, price, description) {
+            const product = { name, price, description };
+            cart.push(product);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            alert(`${name} has been added to your cart!`);
+            displayCart();
+        }
+
+        function displayCart() {
+            const cartList = document.getElementById("cart-list");
+            cartList.innerHTML = "";
+
+            if (cart.length === 0) {
+                cartList.innerHTML = "<li>Your cart is empty!</li>";
+            } else {
+                cart.forEach((product, index) => {
+                    const li = document.createElement("li");
+                    li.innerHTML = `${product.name} - $${product.price.toFixed(2)} <button onclick="removeFromCart(${index})">Remove</button>`;
+                    cartList.appendChild(li);
+                });
+            }
+            calculateTotal();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            displayCart();
+        }
+
+        function clearCart() {
+            cart = [];
+            localStorage.removeItem("cart");
+            alert("Your cart has been cleared.");
+            displayCart();
+        }
+
+        function calculateTotal() {
+            const total = cart.reduce((sum, product) => sum + product.price, 0);
+            document.getElementById("total-price").textContent = `Total: $${total.toFixed(2)}`;
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            displayCart();
+        });
+    </script>
 
     <footer>
         <p>&copy; 2025 Argentinian Mate & Products. All rights reserved.</p>
