@@ -70,13 +70,15 @@ nav ul li a {
 }
 
 /* Card Layout */
+
 .cards-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     padding: 20px;
     margin: 0 auto;
-}
+  }
+  
 
 @media (max-width: 1024px) {
     .cards-container {

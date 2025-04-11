@@ -38,7 +38,7 @@ if (!lastVisit) {
 localStorage.setItem("lastVisit", now);
 
 // Dynamic Card Injection for Puerto Rico's Local Discoveries
-fetch('data/discovery.json')
+fetch('data/discover.json')
   .then(response => response.json())
   .then(data => {
     const cardsContainer = document.getElementById('cards-container');

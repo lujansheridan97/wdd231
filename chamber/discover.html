@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Explore the Chamber of Commerce Directory.">
-  <meta name="author" content="Maria de Lujan Ruiz Diaz Franco">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore the Chamber of Commerce Directory." />
+  <meta name="author" content="Maria de Lujan Ruiz Diaz Franco" />
 
-  <meta property="og:title" content="Chamber of Commerce Directory - Lujan Ruiz Diaz Franco">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://lujansheridan97.github.io/wdd231/chamber/images/chamber.jpg">
-  <meta property="og:url" content="https://lujansheridan97.github.io/wdd231/chamber.html"> 
+  <meta property="og:title" content="Chamber of Commerce Directory - Lujan Ruiz Diaz Franco" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://lujansheridan97.github.io/wdd231/chamber/images/chamber.jpg" />
+  <meta property="og:url" content="https://lujansheridan97.github.io/wdd231/chamber/discover.html" />
 
-  
   <link rel="stylesheet" href="styles/discover.css" />
-  <script defer src="scripts/discover.js"></script>
-
-  <title>Discover | Chamber of Commerce</title>
-  <script src="scripts/hamburger.js" defer></script>
-  <script src="scripts/footer.js" defer></script>
-  <script src="scripts/weather.js" defer></script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <script defer src="scripts/hamburger.js"></script>
+  <script defer src="scripts/footer.js"></script>
+  <script defer src="scripts/weather.js"></script>
+  <script defer src="scripts/discover.js"></script>
+
+  <title>Discover | Chamber of Commerce</title>
 </head>
 <body>
   <header>
     <nav>
-      <button id="menuBtn"></button>
+      <button id="menuBtn">☰</button>
       <ul id="navMenu">
         <li><a href="index.html">Home</a></li>
         <li><a href="discover.html" class="active">Discover</a></li>
@@ -38,10 +37,8 @@
   </header>
 
   <main>
-    <!-- Page Title (Updated to match page title) -->
     <h1>Discover Puerto Rico</h1>
 
-    <!-- Static Content -->
     <section id="history">
       <h2>History of Puerto Rico</h2>
       <p>
@@ -61,29 +58,25 @@
       </ul>
     </section>
 
-    <!-- Upcoming Events -->
     <section id="events">
       <h2>Upcoming Events in Puerto Rico</h2>
       <ul>
-        <li><strong>Fiesta de la Calle San Sebastián</strong> - January 15th-19th in Old San Juan</li>
-        <li><strong>La Campechada</strong> - October 18th-20th, celebrating Puerto Rican culture</li>
-        <li><strong>Puerto Rico Heineken Jazzfest</strong> - March 6th-9th in San Juan</li>
+        <li><strong>Fiesta de la Calle San Sebastián</strong> - January 15th–19th in Old San Juan</li>
+        <li><strong>La Campechada</strong> - October 18th–20th, celebrating Puerto Rican culture</li>
+        <li><strong>Puerto Rico Heineken Jazzfest</strong> - March 6th–9th in San Juan</li>
       </ul>
       <a href="https://www.discoverpuertorico.com/events" target="_blank">See More</a>
     </section>
 
-    <!-- Cards Section -->
-    <section class="grid-container" id="cards-container">
+    <section class="cards-container" id="cards-container">
       <!-- Cards will be dynamically injected here -->
     </section>
 
-    <!-- Map -->
     <section id="map">
       <h2>Puerto Rico</h2>
       <iframe src="https://www.google.com/maps/embed?pb=..." loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 
-    <!-- Weather -->
     <section id="weather-container">
       <h2>Puerto Rico Weather</h2>
       <div class="weather-content">
@@ -106,7 +99,6 @@
       </div>
     </section>
 
-    <!-- Message for Last Visit -->
     <section class="visit-message" id="visitMessage"></section>
   </main>
 
@@ -117,8 +109,7 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Fetch data from JSON and inject it into the cards section
-    fetch('data/discovery.json')
+    fetch('data/discover.json')
       .then(response => response.json())
       .then(data => {
         const cardsContainer = document.getElementById('cards-container');
